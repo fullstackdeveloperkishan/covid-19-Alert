@@ -36,16 +36,16 @@ app.get('/covid',(req,res)=>{
 request({url: url}, (error , response) => {
     const coronadata = JSON.parse(response.body)
    //top data total
-     const Confirmed = coronadata['statewise'][0].confirmed
-     const Active =coronadata['statewise'][0].active
-     const Deaths =coronadata['statewise'][0].deaths
-     const Recovered =coronadata['statewise'][0].recovered
+     const Confirmed = coronadata['statewise'][0].confirmed.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+     const Active =coronadata['statewise'][0].active.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+     const Deaths =coronadata['statewise'][0].deaths.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+     const Recovered =coronadata['statewise'][0].recovered.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
      const LastUpdated = coronadata['statewise'][0].lastupdatedtime.toString()
 
     //daily increase
-     const dailyConfirmed =coronadata['statewise'][0].deltaconfirmed
-     const dailyRecovered =coronadata['statewise'][0].deltarecovered
-     const dailyDeaths =coronadata['statewise'][0].deltadeaths
+     const dailyConfirmed =coronadata['statewise'][0].deltaconfirmed.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+     const dailyRecovered =coronadata['statewise'][0].deltarecovered.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+     const dailyDeaths =coronadata['statewise'][0].deltadeaths.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 
      //list of covid data code
