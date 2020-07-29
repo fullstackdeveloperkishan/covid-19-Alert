@@ -1,0 +1,108 @@
+//all the express modules
+const express = require('express')
+const https = require('https')
+const request = require('request')
+const hbs = require('hbs')
+
+//use express application
+const app = express();
+
+
+//set view point of handlebars (hbs)
+app.set('view engine', 'hbs')
+
+app.use(express.static(__dirname + '/public'));
+
+//API call 
+//const (url) ="https://api.covid19api.com/summary";
+const url = "https://api.covid19india.org/data.json";
+
+app.get('/teams',(req,res)=>{
+  res.render('teams');
+});
+
+app.get('/index',(req,res)=>{
+  res.render('index');
+});
+
+app.get('/awareness',(req,res)=>{
+  res.render('awareness');
+});
+app.get('/covid',(req,res)=>{
+  res.render('covid');
+});
+
+//API request
+request({url: url}, (error , response) => {
+    const coronadata = JSON.parse(response.body)
+    //const CountryCode = coronadata.Countries[76].CountryCode
+    /*const Confirmed = coronadata.Countries[76].TotalConfirmed.toString()
+    const active= coronadata.Countries[76].TotalConfirmed.toString()-coronadata.Countries[76].TotalRecovered.toString()
+    const Deaths = coronadata.Countries[76].TotalDeaths.toString()
+    const recovered= coronadata.Countries[76].TotalRecovered.toString()
+    */
+     const Confirmed = coronadata['statewise'][0].confirmed
+     const Active =coronadata['statewise'][0].active
+     const Deaths =coronadata['statewise'][0].deaths
+     const Recovered =coronadata['statewise'][0].recovered
+     const LastUpdated = coronadata['statewise'][0].lastupdatedtime.toString()
+
+    //daily increase
+     const dailyConfirmed =coronadata['statewise'][0].deltaconfirmed
+     const dailyRecovered =coronadata['statewise'][0].deltarecovered
+     const dailyDeaths =coronadata['statewise'][0].deltadeaths
+
+
+     //list of covid data code
+     
+     var cdata = coronadata['statewise'];
+
+     for(var i = 0; i < cdata.length; i++) {
+       cdata[i].active = cdata[i].active.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+       cdata[i].deaths = cdata[i].deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+       cdata[i].recovered = cdata[i].recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+       cdata[i].confirmed = cdata[i].confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+     }
+
+    //removing the total data from index[0] and deleting the state unassigned data
+      delete cdata['36'];
+      cdata.shift()
+
+
+
+      //chart
+      
+      
+      
+      
+
+  //getting data from server
+  app.get('/', (req,res) => {
+     res.render('index', {
+       totalconfirmed: Confirmed,
+       totalactive: Active,
+       totaldeaths: Deaths,
+       totalrecovered: Recovered,
+       lastUpdated: LastUpdated,
+
+       //daily increase
+      increaseConfirmed: dailyConfirmed,
+      increaseRecovered:  dailyRecovered,
+      increaseDeaths: dailyDeaths,
+      //loopdata
+      cdata
+
+
+     })
+
+  })
+  
+    
+})
+
+
+//loacal host
+app.listen(3000,() => {
+    console.log("server is working");
+    
+})
