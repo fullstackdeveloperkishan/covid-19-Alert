@@ -156,23 +156,23 @@
    <div class="country-section"> 
       <div class="row">
                <div class="card text-center" id="card1">
-                <div class="card-body">
-              <h5 class="card-title" id="title1">Total Confirmed<span style="font-size:25px; font-weight:900;"> {{totalconfirmed}}</span><br> <span class="p-1">&#11165</span>{{increaseConfirmed}}</span> </h5>
+                <div class="card-body ">
+              <h5 class="card-title" id="title1">Total Confirmed<span style="font-size:25px; font-weight:900;"> <span class="countup">{{totalconfirmed}}</span></span><br> <span class="p-1">&#11165</span><span class="countup">{{increaseConfirmed}}</span></span> </h5>
                  </div>
         </div>
         <div class="card text-center" id="card2">
-            <div class="card-body">
-              <h5 class="card-title" id="title2">Total Active<br> <span style="font-size:25px;font-weight:900;">{{totalactive}}</span></h5>
+            <div class="card-body ">
+              <h5 class="card-title" id="title2">Total Active<br> <span style="font-size:25px;font-weight:900;"><span class="countup">{{totalactive}}</span></span></h5>
             </div>
         </div>
         <div class="card text-center"  id="card3">
-            <div class="card-body">
-              <h5 class="card-title"  id="title3">Recovered<span style="font-size:25px;font-weight:900;"><br>{{totalrecovered}}</span><br><span class="p-1">&#11165</span>{{increaseRecovered}}</span></h5>
+            <div class="card-body ">
+              <h5 class="card-title"  id="title3">Recovered<span style="font-size:25px;font-weight:900;"><br><span class="countup">{{totalrecovered}}</span></span><br><span class="p-1">&#11165</span><span class="countup">{{increaseRecovered}}</span></span></h5>
            </div>
         </div>
         <div class="card text-center" id="card4">
-           <div class="card-body">
-            <h5 class="card-title" id="title4">Deaths<span style="font-size:25px;font-weight:900;"><br>{{totaldeaths}}</span> <br><span class="p-1">&#11165</span>{{increaseDeaths}}</span></h5>
+           <div class="card-body ">
+            <h5 class="card-title" id="title4">Deaths<span style="font-size:25px;font-weight:900;"><br><span class="countup">{{totaldeaths}}</span></span> <br><span class="p-1 ">&#11165</span><span class="countup">{{increaseDeaths}}</span></span></h5>
           </div>
        </div>
      </div>
@@ -244,6 +244,24 @@
        </div>
      </div>
      </footer>
+
+
+
+
+      <!-- javascript counter up plugin cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+      <!-- javascript counter up  cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous"></script>
+      
+      <!-- javascript counter code -->
+
+        <script>
+         $('.countup').counterUp({
+           delay: 9,
+            time: 1000
+         });  
+        </script>
   </body>
 
 <!-- javascript -->
@@ -251,7 +269,4 @@
 <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
 <script src="Bootstrap/js/popper.min.js"></script>
 <script src="Bootstrap/js/bootstrap.min.js"></script>
-
-
-
 </html>

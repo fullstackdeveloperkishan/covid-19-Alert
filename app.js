@@ -35,12 +35,7 @@ app.get('/covid',(req,res)=>{
 //API request
 request({url: url}, (error , response) => {
     const coronadata = JSON.parse(response.body)
-    //const CountryCode = coronadata.Countries[76].CountryCode
-    /*const Confirmed = coronadata.Countries[76].TotalConfirmed.toString()
-    const active= coronadata.Countries[76].TotalConfirmed.toString()-coronadata.Countries[76].TotalRecovered.toString()
-    const Deaths = coronadata.Countries[76].TotalDeaths.toString()
-    const recovered= coronadata.Countries[76].TotalRecovered.toString()
-    */
+   //top data total
      const Confirmed = coronadata['statewise'][0].confirmed
      const Active =coronadata['statewise'][0].active
      const Deaths =coronadata['statewise'][0].deaths
@@ -71,7 +66,8 @@ request({url: url}, (error , response) => {
 
 
       //chart
-      
+     
+
       
       
       
