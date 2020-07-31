@@ -12,6 +12,8 @@
  <!-- javascript CSS -->
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <link rel="stylesheet" href="Bootstrap/CSS/mainstyle.css">
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    
      <!-- font added -->
     <link rel="stylesheet" href="Bootstrap/fontawesome-free-5.10.2-web/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
@@ -288,7 +290,7 @@
       <div class="row">
                <div class="card text-center" id="card1">
                 <div class="card-body ">
-              <h5 class="card-title" id="title1">Total Confirmed<span style="font-size:25px; font-weight:900;"> <span class="countup">{{totalconfirmed}}</span></span><br> <span class="p-1">&#11165</span><span class="countup">{{increaseConfirmed}}</span></span> </h5>
+              <h5 class="card-title" id="title1">Total Confirmed<span style="font-size:25px; font-weight:900;"> <span class="countup">{{totalconfirmed}}</span></span><br> <span class="p-1">&#11165</span><span class="countup">{{increaseConfirmed}}</span></span></h5>
                  </div>
         </div>
         <div class="card text-center" id="card2">
@@ -388,17 +390,18 @@
       
       <!-- javascript counter code -->
 
-        <script>
-         $('.countup').counterUp({
-           delay: 9,
-            time: 1000
-         });  
-        </script>
+        
   </body>
 
 <!-- javascript -->
 
-<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script>
+    $('.countup').counterUp({
+           delay: 9,
+            time: 1000
+         });  
+        </script>
+
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </html>
