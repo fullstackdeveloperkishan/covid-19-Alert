@@ -1,8 +1,11 @@
 *{
-    margin:0px;
+    
     padding:0px;
     box-sizing:border-box;
-   
+}
+#page-wrap{
+    
+    margin: 0 auto;
 }
 .TopNavigation{
     background-image: linear-gradient(to bottom, #0b0808, #361213, #5f1317, #890e17, #b3040f); 
@@ -160,6 +163,9 @@ th {
     width:18%;
 }
 
+.Home-page{
+    text-align:left;
+}
 /*        end of Home Page  */
 /*  *********************** Starting Of Teams Page   *************************/
 .middle-section{
@@ -217,6 +223,16 @@ cursor:pointer;
 /* /* border: 1px solid #0b0808; */
 
 /* Starting code of Awareness Page */
+
+.content-section{
+    
+}
+    
+  .first-section-heading {
+    display:flex;
+     flex-direction:column;
+ }
+ /*
  .first-section-heading img{
     border-radius: 50%;
     position:relative;
@@ -229,10 +245,16 @@ cursor:pointer;
 
 .second-section-heading{
     padding: 0px 20px 0px 20px;
+    display: flex;
+     flex-direction:column;
 }
 .second-section img{
     border-radius: 50%;
     
+}
+.third-section-heading {
+   
+    flex-direction:row;
 }
 
 .third-section p{
@@ -243,13 +265,17 @@ cursor:pointer;
     bottom:40px;
     border-radius: 50%;
 }
+.fourth-section-heading{
+    display:flex;
+    flex-direction:column;
+}
 .fourth-section p{
     position:relative;
     top:50px;
     line-height:1.5;
     /* position:relative;
     top:30px; */
-}
+/* }
 .fourth-section img{
     border-radius:50%;
 }
@@ -257,18 +283,158 @@ cursor:pointer;
     width:100%;
     background-color: aqua;
     height:250px;
-}
+} */ 
 
 
 /* Ending section  of Awareness Page */
 
 /*    Responsive Code  of Home Page  (Card Section)  */
- 
-
-@media (min-width:768px){
+@media (min-width:1200px){
     .logo{
         width:30%;
-        margin-left:40px;
+        margin-left:10px;
+     }
+    .logo a{
+          letter-spacing: 1px;
+          word-spacing: 1px;
+          font-size:1.4rem;
+     }
+    .header_content h4{
+        margin-top:30px;
+        font-size:2rem;
+        margin-left:50px;
+        font-weight:800;
+    }
+    .header_content h3{
+        font-size:2rem;
+        margin-left:50px;
+        font-weight:800;
+     }
+    .header_content h2{
+        font-size:2.3rem;
+        margin-left:50px;
+        font-weight:850;
+        }
+     .btn-section {
+        margin-left:70px;
+        margin-top:10px;
+       
+     }
+    .top-btn{
+        width: 25%;
+        height:50px;
+        font-size:20px;
+    }
+    .btn-section #btn1{
+         margin-left:10px;
+    } 
+    .header_content  #btn2{
+        margin-left:-30px;
+    }
+    .header_content img{
+        width:40%;
+        margin:auto 80px;
+    }
+    .section_heading h2{
+        margin-left:-30px;
+        font-size:34px;
+        text-align:center;
+    }
+    .section_heading h5{
+      font-size:26px;
+      margin-left:-20px;
+      height:55px;
+      padding-top:8px;
+      }
+     
+    .list_table{
+       margin:2px 2px 0px 0px;
+       padding:0px 15px;
+    }
+    td{
+       font-size:20px;
+    }
+    th{
+        width:20%;
+        font-size:20px;
+    }
+ 
+}
+@media (max-width:1199px){
+    .logo{
+        width:30%;
+        margin-left:10px;
+     }
+    .logo a{
+          letter-spacing: 1px;
+          word-spacing: 1px;
+          font-size:1.8rem;
+     }
+     .header_content h4{
+        margin-top:30px;
+        font-size:2rem;
+        margin-left:50px;
+        font-weight:800;
+    }
+    .header_content h3{
+        font-size:2rem;
+        margin-left:50px;
+        font-weight:800;
+     }
+    .header_content h2{
+        font-size:2.3rem;
+        margin-left:50px;
+        font-weight:850;
+        }
+     .btn-section {
+        margin-left:70px;
+        margin-top:10px;
+       
+     }
+    .top-btn{
+        width: 30%;
+        height:55px;
+        font-size:18px;
+    }
+    .btn-section #btn1{
+         margin-left:10px;
+    } 
+    .header_content  #btn2{
+        margin-left:-30px;
+    }
+    .header_content img{
+        width:40%;
+        margin:auto 80px;
+    }
+    .section_heading h2{
+        margin-left:-10px;
+        font-size:38px;
+        text-align:center;
+    }
+    .section_heading h5{
+      font-size:26px;
+      margin-left:-10px;
+      height:70px;
+      padding-top:8px;
+      }
+     
+    .list_table{
+       margin:2px 2px 0px 0px;
+       padding:9px 15px;
+    }
+    td{
+       font-size:20px;
+    }
+    th{
+        width:20%;
+        font-size:20px;
+    }
+ 
+}
+@media (max-width:991px){
+    .logo{
+        width:30%;
+        margin-left:60px;
      }
     .logo a{
           letter-spacing: 1px;
@@ -313,6 +479,71 @@ cursor:pointer;
     }
     .section_heading h2{
         margin-left:0px;
+        font-size:42px;
+        text-align:center;
+    }
+    .section_heading h5{
+      font-size:30px;
+      }
+    .list_table{
+       margin:2px 2px 0px 0px;
+    }
+    td{
+       font-size:22px;
+    }
+    th{
+        width:10%;
+        font-size:22px;
+    }
+}
+@media (max-width:768px){
+    .logo{
+        width:40%;
+        margin-left:40px;
+     }
+    .logo a{
+          letter-spacing: 1px;
+          word-spacing: 1px;
+          font-size:1.4rem;
+     }
+    .header_content h4{
+        margin-top:30px;
+        font-size:2rem;
+        margin-left:50px;
+        font-weight:800;
+    }
+    .header_content h3{
+        font-size:2rem;
+        margin-left:50px;
+        font-weight:800;
+     }
+    .header_content h2{
+        font-size:2.3rem;
+        margin-left:50px;
+        font-weight:850;
+        }
+     .btn-section {
+        margin-left:80px;
+        margin-top:10px;
+       
+     }
+    .top-btn{
+        width: 25%;
+        height:56px;
+        font-size:18px;
+    }
+    .btn-section #btn1{
+         margin-left:10px;
+    } 
+    .header_content  #btn2{
+        margin-left:-30px;
+    }
+    .header_content img{
+        width:40%;
+        margin:auto 150px;
+    }
+    .section_heading h2{
+        margin-left:0px;
         font-size:30px;
         text-align:center;
     }
@@ -346,15 +577,13 @@ cursor:pointer;
        font-size:22px;
      } */
 }
-
-
-
 @media(max-width:670px){
     .logo{
         width:50%;
         margin-left:70px;
      }
     .logo a{
+          padding-top:15px;
           letter-spacing: 2px;
           word-spacing: 2px;
           font-size:2.5rem;
@@ -383,7 +612,7 @@ cursor:pointer;
      }
     .top-btn{
         width: 30%;
-        height:56px;
+        height:50px;
         font-size:16px;
     }
     .btn-section #btn1{
@@ -403,6 +632,8 @@ cursor:pointer;
     }
     .section_heading h5{
       font-size:26px;
+      height:55px;
+      margin-left:3px;
       }
     .list_table{
        margin:2px 2px 0px 0px;
@@ -431,12 +662,13 @@ cursor:pointer;
        font-size:22px;
      }
 }
-@media(max-width:530px){
+@media(max-width:550px){
     .logo{
         width:50%;
         margin-left:20px;
      }
     .logo a{
+        padding-top:25px;
           letter-spacing: 1px;
           word-spacing: 2px;
           font-size:1.9rem;
@@ -462,7 +694,7 @@ cursor:pointer;
         margin-top:10px;
      }
     .top-btn{
-        width: 40%;
+        width: 35%;
         height:56px;
     }
     .btn-section #btn1{
@@ -482,6 +714,7 @@ cursor:pointer;
     }
     .section_heading h5{
       font-size:26px;
+      margin-left:3px;
       }
     .list_table{
        margin:2px 2px 0px 0px;
@@ -516,6 +749,7 @@ cursor:pointer;
         margin-left:-20px;
      }
     .logo a{
+        padding-top:25px;
           letter-spacing: 1px;
           font-size:1.5rem;
          
@@ -535,12 +769,26 @@ cursor:pointer;
         margin:auto;
         font-weight:650;
         }
-     .btn-section {
+        .btn-section {
+            margin-left:10px;
+            margin-top:10px;
+         }
+        .top-btn{
+            width: 35%;
+            height:56px;
+        }
+        .btn-section #btn1{
+             margin-left:10px;
+        } 
+        .header_content  #btn2{
+            margin-left:-30px;
+        }
+     /* .btn-section {
         margin-left:30px;
         margin-top:10px;
      }
     .top-btn{
-        width: 60%;
+        width: 40%;
     }
     .btn-section #btn1{
          margin-left:10px;
@@ -548,7 +796,7 @@ cursor:pointer;
      } 
     .header_content  #btn2{
         margin-left:-30px;
-    }
+    } */
     .header_content img{
         width:300px;
         margin:auto 30px;
@@ -560,6 +808,7 @@ cursor:pointer;
     }
     .section_heading h5{
       font-size:22px;
+      height:55px;
       }
       .list_table{
        margin:2px 2px 0px 0px;
@@ -594,6 +843,7 @@ cursor:pointer;
         margin-left:-30px;
      }
     .logo a{
+          padding-top:25px;
           letter-spacing: 1px;
           font-size:1.4rem;
          
@@ -619,6 +869,7 @@ cursor:pointer;
      }
     .top-btn{
         width: 70%;
+        height:45px;
     }
     .btn-section #btn1{
          margin-left:10px;
@@ -639,7 +890,7 @@ cursor:pointer;
         text-align:center;
     }
     .section_heading h5{
-      
+       height:60px;
         font-size:20px;
       }
       .list_table{
@@ -672,4 +923,15 @@ cursor:pointer;
        font-size:14px;
      }
     
+}
+
+/*   Responsive code of Teams Pages */
+
+@media(max-width:290px){
+    .team_heading h2{
+        padding:0px;
+        font-size:22px;
+        text-align:center;
+        margin:auto;
+    }
 }
