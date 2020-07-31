@@ -3,7 +3,7 @@ const express = require('express')
 const https = require('https')
 const request = require('request')
 const hbs = require('hbs')
-  
+
 
 //use express application
 const app = express();
@@ -70,7 +70,7 @@ request({url: url}, (error , response) => {
       //chart
          
      
-
+      
       
       
       
