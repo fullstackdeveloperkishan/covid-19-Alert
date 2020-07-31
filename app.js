@@ -3,6 +3,7 @@ const express = require('express')
 const https = require('https')
 const request = require('request')
 const hbs = require('hbs')
+  
 
 //use express application
 const app = express();
@@ -12,6 +13,7 @@ const app = express();
 app.set('view engine', 'hbs')
 
 app.use(express.static(__dirname + '/public'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 //API call 
 //const (url) ="https://api.covid19api.com/summary";
@@ -66,6 +68,7 @@ request({url: url}, (error , response) => {
 
 
       //chart
+         
      
 
       
