@@ -3,22 +3,16 @@
 <head>
    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
        <!-- favicon icons  -->
     <link rel="icon" 
       type="image/png" 
       href="">
-  <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-
-  <!-- javascript CSS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
-
-   <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
+ <!-- javascript CSS -->
+    <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <link rel="stylesheet" href="Bootstrap/CSS/mainstyle.css">
-     
+     <!-- font added -->
     <link rel="stylesheet" href="Bootstrap/fontawesome-free-5.10.2-web/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,100;1,200;1,800&display=swap" rel="stylesheet">
@@ -74,28 +68,78 @@
 .country-section .card-title{
  color:#3CF0C5;
 }
+@media (min-width:1200px){
+ .country_title h1{
+        font-size:36px;
+        margin-top:10px;
+   } 
+  .country_title h5{
+        font-size:24px;
+   } 
+   #card1 {
+        margin-left:120px;
+   }
+    #card3{
+        margin-left:10px;
+   }
 
+}
+@media(max-width:1199px){
+  .country_title h1{
+        font-size:34px;
+        margin-top:10px;
+   } 
+  .country_title h5{
+        font-size:24px;
+   } 
+  #card1 {
+        margin-left:40px;
+   }
+    #card3{
+        margin-left:10px;
+   }
+    
+   }
 
-@media(max-width:768px){
-     .country_title h1{
-        font-size:40px;
+@media(max-width:991px){
+    .country_title h1{
+        font-size:34px;
    } 
     .country_title h5{
-        font-size:28px;
+        font-size:24px;
    } 
-    #card1 {
+   #card1 {
         margin-left:10px;
    }
     #card3{
         margin-left:10px;
    }
+  
+}
+
+
+
+
+@media(max-width:768px){
+     .country_title h1{
+        font-size:32px;
+   } 
+    .country_title h5{
+        font-size:24px;
+   } 
+    #card1 {
+        margin-left:45px;
+   }
+    #card3{
+        margin-left:45px;
+   }
 }
 @media(max-width:670px){
   .country_title h1{
-    font-size:36px;
+    font-size:30px;
 } 
 .country_title h5{
-    font-size:24px;
+    font-size:22px;
 } 
 #card1 {
         margin-left:60px;
@@ -108,12 +152,24 @@
     
 }
 @media(max-width:530px){
+  .country_title h1{
+    font-size:26px;
+} 
+.country_title h5{
+    font-size:20px;
+} 
   #card1, #card2, #card3, #card4{
         margin-left:150px
     }
     
 }
 @media(max-width:450px){
+  .country_title h1{
+    font-size:24px;
+} 
+.country_title h5{
+    font-size:18px;
+} 
     #card1, #card2, #card3, #card4{
       margin:10px auto;
         
@@ -121,6 +177,12 @@
   
 }
 @media(max-width:375px){
+  .country_title h1{
+    font-size:24px;
+} 
+.country_title h5{
+    font-size:18px;
+} 
   #card1, #card2,  #card3, #card4{
         margin:10px 90px;
         
@@ -128,6 +190,12 @@
    
 }
 @media(max-width:320px){
+  .country_title h1{
+    font-size:20px;
+} 
+.country_title h5{
+    font-size:14px;
+} 
   #card1, #card2,  #card3, #card4{
         margin:20px auto;
         
@@ -135,18 +203,22 @@
    
 }
 @media(max-width:290px){
+  .country_title h1{
+    font-size:18px;
+} 
+.country_title h5{
+    font-size:12px;
+} 
  #card1, #card2,  #card3, #card4{
         margin:10px auto;
         
     }
 }
-
-
-
 </style>
 <title>Covid-19</title>
 </head>
 <body>
+<div id="page-wrap">
   <div class='TopNavigation'>
     <header class="navigation">
        <div class="bottomHeader">
@@ -185,7 +257,7 @@
       <div class="container-fluid">
          <div class="row">
              <div class="col-lg-7">
-                 <h4>Let's unite</h4>
+                 <h4>Let's Unite</h4>
                  <h3 >Save The Earth</h3>
                  <h2 class="top-hero-section-heading-3">From <span style="color:rgb(1, 79, 224);">Covid</span>-19 Pandemic</h2></br>
                 <div class="btn-section">
@@ -303,6 +375,7 @@
        </div>
      </div>
      </footer>
+     </div>
 
 
 
@@ -325,7 +398,7 @@
 
 <!-- javascript -->
 
-<script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
-<script src="Bootstrap/js/popper.min.js"></script>
-<script src="Bootstrap/js/bootstrap.min.js"></script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </html>
