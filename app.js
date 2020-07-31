@@ -3,7 +3,10 @@ const express = require('express')
 const https = require('https')
 const request = require('request')
 const hbs = require('hbs')
+<<<<<<< HEAD
 
+=======
+>>>>>>> 78a086c6acbf20ca0b904437b20a82ecaddb5870
 
 //use express application
 const app = express();
