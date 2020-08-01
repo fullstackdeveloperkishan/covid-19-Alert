@@ -223,7 +223,6 @@ cursor:pointer;
 .content-section{
     display:flex;
     flex-flow: column wrap;
-    padding:0px 8px;
 }
 .first-section-heading img{
     border-radius: 50%;
