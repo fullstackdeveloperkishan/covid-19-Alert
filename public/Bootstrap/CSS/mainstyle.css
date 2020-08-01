@@ -222,7 +222,7 @@ cursor:pointer;
 /* Starting code of Awareness Page */
 .content-section{
     display:flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     padding:0px 8px;
 }
 .first-section-heading img{
@@ -287,6 +287,20 @@ cursor:pointer;
 
 /* Ending section  of Awareness Page */
 
+/*        Starting  code  of  Covid-19  Page       */
+
+.covid-19-section{
+    display:flex;
+    flex-flow: column wrap;
+    padding:0px 8px;
+}
+.covid-19-section
+
+
+
+
+
+/*      End of Covid-19 Page             */
 /*    Responsive Code  of Home Page  (Card Section)  */
 @media (min-width:1200px){
     .logo{
@@ -1176,3 +1190,7 @@ cursor:pointer;
     }
     
 }
+
+/*          Responsive Page of Covid-19 Page         */
+
+
