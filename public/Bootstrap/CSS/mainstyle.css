@@ -11,7 +11,6 @@ p{
     font-size:18px;
 }
 .logo{
-    width:20%;
     text-align:center;
     float:left;
 }
@@ -41,7 +40,7 @@ h3{
     margin-left:10px;
     font-weight:900;
     /* font-family:'MarkProHeavy';   */
-    font-family: 'Montserrat', sans-serif; 
+    /* font-family: 'Montserrat', sans-serif;  */
     
      /* font-weight: 900; */
   font-style: normal;
@@ -53,7 +52,7 @@ h3{
     background: -webkit-linear-gradient(rgba(194, 72, 72, 0), rgb(229, 9, 20));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
 }
 
 .navbar-nav li a{
@@ -78,20 +77,17 @@ h3{
     margin-top:10px;
     margin-left:70px;
     font-weight: 850;
-    font-family: 'Montserrat-lite', sans-serif;
+    /* font-family: 'Montserrat-lite', sans-serif; */
 }
 .header_content h2{
     color:red;
 }
 .header_content h4{
-    font-family: 'Montserrat-lite', sans-serif;
+    /* font-family: 'Montserrat-lite', sans-serif; */
 }
 .header_content img{
     max-width:60%;
     width:300px;
-}
-.header_content #btn1{
-    margin-left:70px;
 }
 .top-btn{
     width: 20%;
@@ -122,14 +118,14 @@ h3{
     letter-spacing:2px;
     word-spacing: 2px;
     font-size:34px;
-    font-family: 'Ubuntu';
+    /* font-family: 'Ubuntu'; */
 }
 .section_heading h5{
     text-align:left;
     color:white;
     padding:12px;
     background-color:#112e8f;
-    font-family: 'RubikBold';
+    /* font-family: 'RubikBold'; */
     height:60px;
 }
 .list_table{
@@ -343,10 +339,6 @@ th {
 /*      End of Covid-19 Page             */
 /*    Responsive Code  of Home Page  (Card Section)  */
 @media(min-width:1200px){
-    .logo{
-        width:30%;
-        margin-left:10px;
-     }
     .logo a{
           letter-spacing: 1px;
           word-spacing: 1px;
@@ -369,7 +361,6 @@ th {
         font-weight:850;
         }
      .btn-section {
-        margin-left:70px;
         margin-top:10px;
        
      }
@@ -378,14 +369,10 @@ th {
         height:50px;
         font-size:20px;
     }
-    .btn-section #btn1{
-         margin-left:10px;
-    } 
     .header_content  #btn2{
         margin-left:-30px;
     }
     .header_content img{
-        width:40%;
         margin:auto 80px;
     }
     .section_heading h2{
@@ -414,10 +401,6 @@ th {
  
 }
 @media (max-width:1199px){
-    .logo{
-        width:30%;
-        margin-left:10px;
-     }
     .logo a{
           letter-spacing: 1px;
           word-spacing: 1px;
@@ -440,7 +423,6 @@ th {
         font-weight:850;
         }
      .btn-section {
-        margin-left:70px;
         margin-top:10px;
        
      }
@@ -449,14 +431,10 @@ th {
         height:50px;
         font-size:17px;
     }
-    .btn-section #btn1{
-         margin-left:10px;
-    } 
     .header_content  #btn2{
         margin-left:-30px;
     }
     .header_content img{
-        width:40%;
         margin:auto 80px;
     }
     .section_heading h2{
@@ -485,10 +463,6 @@ th {
  
 }
 @media (max-width:991px){
-    .logo{
-        width:30%;
-        margin-left:60px;
-     }
     .logo a{
           letter-spacing: 1px;
           word-spacing: 1px;
@@ -511,7 +485,6 @@ th {
         font-weight:850;
         }
      .btn-section {
-        margin-left:80px;
         margin-top:10px;
        
      }
@@ -520,9 +493,6 @@ th {
         height:56px;
         font-size:16px;
     }
-    .btn-section #btn1{
-         margin-left:10px;
-    } 
     .header_content  #btn2{
         margin-left:-30px;
     }
@@ -550,14 +520,17 @@ th {
     }
 }
 @media (max-width:768px){
-    .logo{
-        width:40%;
-        margin-left:40px;
-     }
     .logo a{
           letter-spacing: 1px;
           word-spacing: 1px;
           font-size:1.4rem;
+     }
+     .header_content {
+         text-align: center;
+         margin-left: 0px;
+     }
+     #card1 {
+         margin-bottom: 20px;
      }
     .header_content h4{
         margin-top:30px;
@@ -576,7 +549,6 @@ th {
         font-weight:850;
         }
      .btn-section {
-        margin-left:80px;
         margin-top:10px;
        
      }
@@ -585,14 +557,10 @@ th {
         height:56px;
         font-size:18px;
     }
-    .btn-section #btn1{
-         margin-left:10px;
-    } 
     .header_content  #btn2{
         margin-left:-30px;
     }
     .header_content img{
-        width:40%;
         margin:auto 150px;
     }
     .section_heading h2{
@@ -631,10 +599,6 @@ th {
      } */
 }
 @media(max-width:670px){
-    .logo{
-        width:50%;
-        margin-left:70px;
-     }
     .logo a{
           padding-top:15px;
           letter-spacing: 2px;
@@ -659,7 +623,6 @@ th {
         font-weight:850;
         }
      .btn-section {
-        margin-left:80px;
         margin-top:10px;
        
      }
@@ -668,9 +631,6 @@ th {
         height:50px;
         font-size:16px;
     }
-    .btn-section #btn1{
-         margin-left:10px;
-    } 
     .header_content  #btn2{
         margin-left:-30px;
     }
@@ -716,10 +676,6 @@ th {
      }
 }
 @media(max-width:550px){
-    .logo{
-        width:50%;
-        margin-left:20px;
-     }
     .logo a{
         padding-top:25px;
           letter-spacing: 1px;
@@ -743,16 +699,12 @@ th {
         font-weight:650;
         }
      .btn-section {
-        margin-left:10px;
         margin-top:10px;
      }
     .top-btn{
         width: 35%;
         height:56px;
     }
-    .btn-section #btn1{
-         margin-left:10px;
-    } 
     .header_content  #btn2{
         margin-left:-30px;
     }
@@ -797,10 +749,6 @@ th {
      }
 }
 @media(max-width:450px){
-    .logo{
-        width:20%;
-        margin-left:-20px;
-     }
     .logo a{
         padding-top:25px;
           letter-spacing: 1px;
@@ -823,16 +771,12 @@ th {
         font-weight:650;
         }
         .btn-section {
-            margin-left:10px;
             margin-top:10px;
          }
         .top-btn{
             width: 35%;
             height:56px;
         }
-        .btn-section #btn1{
-             margin-left:10px;
-        } 
         .header_content  #btn2{
             margin-left:-30px;
         }
@@ -891,10 +835,6 @@ th {
      }
 }
 @media(max-width:290px){
-    .logo{
-        width:10%;
-        margin-left:-30px;
-     }
     .logo a{
           padding-top:25px;
           letter-spacing: 1px;
@@ -917,17 +857,10 @@ th {
         font-weight:550;
         text-align:center;
      }
-     .btn-section {
-         margin-left:-25px;
-     }
     .top-btn{
         width: 70%;
         height:45px;
     }
-    .btn-section #btn1{
-         margin-left:10px;
-         margin-bottom:10px;
-     } 
     .header_content  #btn2{
         margin-left:-30px;
     }
@@ -1545,3 +1478,58 @@ th {
         margin-left:70px;
     }
 } */
+
+@font-face {
+    font-family: 'MarkPro';
+    font-weight: 600;
+    src: url('../../fonts/webfont/MarkPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/webfont/MarkPro-Black.otf') format('opentype'),
+        url('../../fonts/webfont/MarkPro-Black.woff') format('woff'),
+        url('../../fonts/webfont/MarkPro-Black.ttf') format('truetype'),
+        url('../../fonts/webfont/MarkPro-Black.svg#MarkPro-Black') format('svg');
+}
+@font-face {
+    font-family: 'MarkPro';
+    font-weight: 700;
+    src: url('../../fonts/webfont/MarkPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/webfont/MarkPro-Bold.otf') format('opentype'),
+        url('../../fonts/webfont/MarkPro-Bold.woff') format('woff'),
+        url('../../fonts/webfont/MarkPro-Bold.ttf') format('truetype'),
+        url('../../fonts/webfont/MarkPro-Bold.svg#MarkPro-Black') format('svg');
+}
+@font-face {
+    font-family: 'MarkPro';
+    font-weight: 900;
+    src: url('../../fonts/webfont/MarkPro-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/webfont/MarkPro-Heavy.otf') format('opentype'),
+        url('../../fonts/webfont/MarkPro-Heavy.woff') format('woff'),
+        url('../../fonts/webfont/MarkPro-Heavy.ttf') format('truetype'),
+        url('../../fonts/webfont/MarkPro-Heavy.svg#MarkPro-Black') format('svg');
+}
+@font-face {
+    font-family: 'MarkPro';
+    font-weight: 500;
+    src: url('../../fonts/webfont/MarkPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/webfont/MarkPro-Medium.otf') format('opentype'),
+        url('../../fonts/webfont/MarkPro-Medium.woff') format('woff'),
+        url('../../fonts/webfont/MarkPro-Medium.ttf') format('truetype'),
+        url('../../fonts/webfont/MarkPro-Medium.svg#MarkPro-Black') format('svg');
+}
+@font-face {
+    font-family: 'MarkPro';
+    font-weight: 400;
+    src: url('../../fonts/webfont/MarkPro.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/webfont/MarkPro.otf') format('opentype'),
+        url('../../fonts/webfont/MarkPro.woff') format('woff'),
+        url('../../fonts/webfont/MarkPro.ttf') format('truetype'),
+        url('../../fonts/webfont/MarkPro.svg#MarkPro-Black') format('svg');
+}
+@font-face {
+    font-family: 'MarkPro';
+    font-weight: 100;
+    src: url('../../fonts/webfont/MarkPro-Hairline.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/webfont/MarkPro-Hairline.otf') format('opentype'),
+        url('../../fonts/webfont/MarkPro-Hairline.woff') format('woff'),
+        url('../../fonts/webfont/MarkPro-Hairline.ttf') format('truetype'),
+        url('../../fonts/webfont/MarkPro-Hairline.svg#MarkPro-Black') format('svg');
+}
