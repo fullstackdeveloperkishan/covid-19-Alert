@@ -1,242 +1,223 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-   <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-       <!-- favicon icons  -->
-    <link rel="icon" 
-      type="image/png" 
-      href="">
- <!-- javascript CSS -->
-    <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="Bootstrap/CSS/mainstyle.css">
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    
-     <!-- font added -->
-    <link rel="stylesheet" href="Bootstrap/fontawesome-free-5.10.2-web/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,100;1,200;1,800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-<style>
-  
-.country_title{
-    margin-bottom:20px;
-}
-.country_title h1{
-    color:white;
-    font-size:30px;
-} 
-.country_title h5{
-    color:white;
-    font-family:'Montserrat','sans-serif';
-    font-size:18px;
-} 
-.country-section .card h5{
-  font-family:'sans-serif';
-  font-size:20px;
-}
-  .card{
-      height:130px; 
-      width:200px;
-      margin:10px; 
-      margin-bottom:30px;
-      font-family: 'Ubuntu';
-      padding:5px; 
-      border-radius:12px;
-      background-color:black; 
-      border:1px solid rgba(31, 22, 22, 0);
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- favicon icons  -->
+  <link rel="icon" type="image/png" href="">
+  <!-- javascript CSS -->
+  <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="Bootstrap/CSS/mainstyle.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="preload"
+    as="style" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+
+  <!-- font added -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,100;1,200;1,800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <style>
+    .body {
+      font-weight: 500;
+    }
+
+    .country_title {
+      margin-bottom: 20px;
+    }
+
+    .country_title h1 {
+      color: white;
+      font-size: 30px;
+    }
+
+    .country_title h5 {
+      color: white;
+      font-size: 18px;
+    }
+
+    .country-section .card h5 {
+      font-size: 20px;
+    }
+
+    .card {
+      height: 130px;
+      width: 200px;
+      margin: auto;
+      justify-content: center;
+      padding: 5px;
+      border-radius: 12px;
+      background-color: black;
+      border: 1px solid rgba(31, 22, 22, 0);
       box-shadow: 4px 4px 1px rgb(94, 91, 91);
-}
-.card:hover{
-    transform: scale(1.09);
-}
- #card1{
-    margin-left:140px;
-} 
-#title1{
-    color:#ffea00;
-    
-}
-#title2{
-    color:#76ff03;
-}
-#title3{
-    color:#29b6f6;
-}
-#title4{
-  color:red;
-}
-.country-section .card-title{
- color:#3CF0C5;
-}
-@media (min-width:1200px){
- .country_title h1{
-        font-size:36px;
-        margin-top:10px;
-   } 
-  .country_title h5{
-        font-size:24px;
-   } 
-   #card1 {
-        margin-left:120px;
-   }
-    #card3{
-        margin-left:10px;
-   }
-
-}
-@media(max-width:1199px){
-  .country_title h1{
-        font-size:34px;
-        margin-top:10px;
-   } 
-  .country_title h5{
-        font-size:24px;
-   } 
-  #card1 {
-        margin-left:40px;
-   }
-    #card3{
-        margin-left:10px;
-   }
-    
-   }
-
-@media(max-width:991px){
-    .country_title h1{
-        font-size:34px;
-   } 
-    .country_title h5{
-        font-size:24px;
-   } 
-   #card1 {
-        margin-left:10px;
-   }
-    #card3{
-        margin-left:10px;
-   }
-  
-}
-
-
-
-
-@media(max-width:768px){
-     .country_title h1{
-        font-size:32px;
-   } 
-    .country_title h5{
-        font-size:24px;
-   } 
-    #card1 {
-        margin-left:45px;
-   }
-    #card3{
-        margin-left:45px;
-   }
-}
-@media(max-width:670px){
-  .country_title h1{
-    font-size:30px;
-} 
-.country_title h5{
-    font-size:22px;
-} 
-#card1 {
-        margin-left:60px;
     }
 
-#card3{
-      margin-left:60px;
+    .card:hover {
+      transform: scale(1.09);
     }
 
-    
-}
-@media(max-width:530px){
-  .country_title h1{
-    font-size:26px;
-} 
-.country_title h5{
-    font-size:20px;
-} 
-  #card1, #card2, #card3, #card4{
-        margin-left:150px
+    #title1 {
+      color: #ffea00;
+
     }
-    
-}
-@media(max-width:450px){
-  .country_title h1{
-    font-size:24px;
-} 
-.country_title h5{
-    font-size:18px;
-} 
-    #card1, #card2, #card3, #card4{
-      margin:10px auto;
-        
+
+    #title2 {
+      color: #76ff03;
     }
-  
-}
-@media(max-width:375px){
-  .country_title h1{
-    font-size:24px;
-} 
-.country_title h5{
-    font-size:18px;
-} 
-  #card1, #card2,  #card3, #card4{
-        margin:10px 90px;
-        
+
+    #title3 {
+      color: #29b6f6;
     }
-   
-}
-@media(max-width:320px){
-  .country_title h1{
-    font-size:20px;
-} 
-.country_title h5{
-    font-size:14px;
-} 
-  #card1, #card2,  #card3, #card4{
-        margin:20px auto;
-        
+
+    #title4 {
+      color: red;
     }
-   
-}
-@media(max-width:290px){
-  .country_title h1{
-    font-size:18px;
-} 
-.country_title h5{
-    font-size:12px;
-} 
- #card1, #card2,  #card3, #card4{
-        margin:10px auto;
-        
+
+    .country-section .card-title {
+      color: #3CF0C5;
     }
-}
-</style>
-<title>Covid-19</title>
+
+    @media (min-width:1200px) {
+      .country_title h1 {
+        font-size: 36px;
+        margin-top: 10px;
+      }
+
+      .country_title h5 {
+        font-size: 24px;
+      }
+
+    }
+
+    @media(max-width:1199px) {
+      .country_title h1 {
+        font-size: 34px;
+        margin-top: 10px;
+      }
+
+      .country_title h5 {
+        font-size: 24px;
+      }
+
+    }
+
+    @media(max-width:991px) {
+      .country_title h1 {
+        font-size: 34px;
+      }
+
+      .country_title h5 {
+        font-size: 24px;
+      }
+    }
+
+
+
+
+    @media(max-width:768px) {
+      .country_title h1 {
+        font-size: 32px;
+      }
+
+      .country_title h5 {
+        font-size: 24px;
+      }
+    }
+
+    @media(max-width:670px) {
+      .country_title h1 {
+        font-size: 30px;
+      }
+
+      .country_title h5 {
+        font-size: 22px;
+      }
+
+
+
+    }
+
+    @media(max-width:530px) {
+      .country_title h1 {
+        font-size: 26px;
+      }
+
+      .country_title h5 {
+        font-size: 20px;
+      }
+
+    }
+
+    @media(max-width:450px) {
+      .country_title h1 {
+        font-size: 24px;
+      }
+
+      .country_title h5 {
+        font-size: 18px;
+      }
+    }
+
+    @media(max-width:375px) {
+      .country_title h1 {
+        font-size: 24px;
+      }
+
+      .country_title h5 {
+        font-size: 18px;
+      }
+
+    }
+
+    @media(max-width:320px) {
+      .country_title h1 {
+        font-size: 20px;
+      }
+
+      .country_title h5 {
+        font-size: 14px;
+      }
+
+    }
+
+    @media(max-width:290px) {
+      .country_title h1 {
+        font-size: 18px;
+      }
+
+      .country_title h5 {
+        font-size: 12px;
+      }
+    }
+  </style>
+  <title>Covid-19</title>
 </head>
+
 <body>
-<div id="page-wrap">
-  <div class='TopNavigation'>
-    <header class="navigation">
-       <div class="bottomHeader">
+  <center>
+  <div id="page-wrap">
+    <div class='TopNavigation'>
+      <header class="navigation" style="max-width: 1180px;">
+        <div class="bottomHeader">
           <div class="container-fluid">
             <nav class="navbar navbar-dark  navbar-expand-md">
               <div class="logo">
-                 <a class="navbar-brand m-3"  href="/"> <span style="color:rgb(1, 79, 224)">Covid</span>-19<span class="logo-text"style="color:red">  Alert</span></a>
+                <a class="navbar-brand m-3" style="font-weight: 900;" href="/"> <span style="color:rgb(1, 79, 224)">Covid</span>-19<span
+                    class="logo-text" style="color:red"> Alert</span></a>
               </div>
               <div class="spacer"></div>
-             
-             
-             <!---End <div class="double-spacer"></div>--> 
 
-              <button data-toggle="collapse" data-target="#navbarToggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse" id="navbarToggler">
+
+              <!---End <div class="double-spacer"></div>-->
+
+              <button data-toggle="collapse" data-target="#navbarToggler" type="button" class="navbar-toggler"><span
+                  class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse" style="flex-direction: column;" id="navbarToggler">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
                     <a class="nav-link" href="/">Home</a>
@@ -255,154 +236,177 @@
             </nav>
           </div>
         </div>
-     </header>
-     <div class="header_content ">
-      <div class="container-fluid">
-         <div class="row">
-             <div class="col-lg-7">
-                 <h4>Let's Unite</h4>
-                 <h3 >Save The Earth</h3>
-                 <h2 class="top-hero-section-heading-3">From <span style="color:rgb(1, 79, 224);">Covid</span>-19 Pandemic</h2></br>
-                <div class="btn-section">
-                  <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=CjwKCAjwsO_4BRBBEiwAyagRTZEHBYXkTlrGzDZdAwOsooXCyJsXFFSO1dA1qrT"> <button type="submit" class="btn top-btn" id="btn1" style="color:#fff;">Learn More</button></a>
-                  <a href="https://www.youtube.com/watch?v=OFFg21KhOV0&t=1s"><button type="submit" class="btn top-btn btn2 m-2" id='btn2' style="color:#fff; ">Watch Video</button></a>
-                </div> 
+      </header>
+
+      <div class="header_content " style="max-width: 1180px;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-7">
+              <div style="font-weight: 900;font-size:35px;">Let's Unite<br>Save The Earth<br>
+                <span style="color: red">From <span style="color:rgb(1, 79, 224);">Covid</span>-19 Pandemic</span>
               </div>
               
-              <div class="col-lg-5 col-md-6">
-                 <img  class="img-fluid" src="images/covid65.png " alt="mycaroselpic" >
+              <div class="btn-section">
+                <a
+                  href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=CjwKCAjwsO_4BRBBEiwAyagRTZEHBYXkTlrGzDZdAwOsooXCyJsXFFSO1dA1qrT">
+                  <button type="submit" class="btn top-btn" id="btn1" style="color:#fff;">Learn More</button></a>
+                <a href="https://www.youtube.com/watch?v=OFFg21KhOV0&t=1s"><button type="submit"
+                    class="btn top-btn btn2 m-2" id='btn2' style="color:#fff; ">Watch Video</button></a>
               </div>
-          </div>
-     </div>
- </div>
-  
- <div class="country_title">
-  <div class="container-fluid">
-    <div class="row ">
-      <div class="col-sm-12">
-         <h1 style="text-align:center">Coronavirus Live Status of India <h5 style="color:white;"class="text-center">Last Updated: {{lastUpdated}} </h5></h1>
-     </div>
-   </div>
-  </div>
-</div>
-<!--Card Section-->
-<div class="container">
-   <div class="country-section"> 
-      <div class="row">
-               <div class="card text-center" id="card1">
-                <div class="card-body ">
-              <h5 class="card-title" id="title1">Total Confirmed<span style="font-size:25px; font-weight:900;"> <span class="countup">{{totalconfirmed}}</span></span><br> <span class="p-1">&#11165</span><span class="countup">{{increaseConfirmed}}</span></span></h5>
-                 </div>
-        </div>
-        <div class="card text-center" id="card2">
-            <div class="card-body ">
-              <h5 class="card-title" id="title2">Total Active<br> <span style="font-size:25px;font-weight:900;"><span class="countup">{{totalactive}}</span></span></h5>
             </div>
-        </div>
-        <div class="card text-center"  id="card3">
-            <div class="card-body ">
-              <h5 class="card-title"  id="title3">Recovered<span style="font-size:25px;font-weight:900;"><br><span class="countup">{{totalrecovered}}</span></span><br><span class="p-1">&#11165</span><span class="countup">{{increaseRecovered}}</span></span></h5>
-           </div>
-        </div>
-        <div class="card text-center" id="card4">
-           <div class="card-body ">
-            <h5 class="card-title" id="title4">Deaths<span style="font-size:25px;font-weight:900;"><br><span class="countup">{{totaldeaths}}</span></span> <br><span class="p-1 ">&#11165</span><span class="countup">{{increaseDeaths}}</span></span></h5>
+
+            <div class="col-lg-5 col-md-6">
+              <img class="img-fluid" src="images/covid65.png " alt="mycaroselpic">
+            </div>
           </div>
-       </div>
-     </div>
-     </div>
+        </div>
+      </div>
+
+      <div class="country_title" style="margin-top: 40px; max-width: 1180px;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1 style="text-align:center">Coronavirus Live Status of India <h5 style="color:white;"
+                  class="text-center">Last Updated: {{lastUpdated}} </h5>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Card Section-->
+      <div style="max-width: 1180px; padding:20px 40px;">
+        <div class="country-section">
+          <div class="row">
+            <div class="card text-center" id="card1">
+              <div class="card-body ">
+                <h5 class="card-title" id="title1">Total Confirmed<span style="font-size:25px; font-weight:900;"> <span
+                      class="countup">{{totalconfirmed}}</span></span><br> <span class="p-1 fa fa-angle-up"></span><span
+                    class="countup">{{increaseConfirmed}}</span></span></h5>
+              </div>
+            </div>
+            <div class="card text-center" id="card1">
+              <div class="card-body ">
+                <h5 class="card-title" id="title2">Total Active<br> <span style="font-size:25px;font-weight:900;"><span
+                      class="countup">{{totalactive}}</span></span></h5>
+              </div>
+            </div>
+            <div class="card text-center" id="card1">
+              <div class="card-body ">
+                <h5 class="card-title" id="title3">Recovered<span style="font-size:25px;font-weight:900;"><br><span
+                      class="countup">{{totalrecovered}}</span></span><br><span class="p-1 fa fa-angle-up"></span><span
+                    class="countup">{{increaseRecovered}}</span></span></h5>
+              </div>
+            </div>
+            <div class="card text-center" id="card1">
+              <div class="card-body ">
+                <h5 class="card-title" id="title4">Deaths<span style="font-size:25px;font-weight:900;"><br><span
+                      class="countup">{{totaldeaths}}</span></span> <br><span class="p-1 fa fa-angle-up"></span><span
+                    class="countup">{{increaseDeaths}}</span></span></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-   </div>
-   </div>
-<!---End of Card Section-->
-
-<section class="section_heading">
-  <div class="container-fluid">
-      <div class="row">
-         <div class="col-lg-8">
-            <h2>
-               Cases of Coronavirus in All States
-            </h2>
-          </div>
-          <div class="col-lg-4">
-             <h5 style="text-align:center;">Last Updated: {{lastUpdated}}</h5>
-         </div>
-       </div>
   </div>
-  {{!-- </div> --}}
-     <div class="list_table table-responsive">
-       <table class="table">
-         <thead>
-           <tr>
-             <th scope="col">State</th>
-             <th scope="col" id="Total">Total</th>
-             <th scope="col" id="Active">Active</th>
-             <th scope="col" id="recover">Recovered</th>
-             <th scope="col" id="death">Death</th>
-           </tr>
-         </thead>
-         <tbody>
-            {{#each cdata}}
-             <tr>
-                <td>
-                   {{this.state}}
-                </td>
-                <td>
-                   {{this.confirmed}}
-                </td>
-                <td>
-                   {{this.active}}
-                </td>
-                <td>
-                   {{this.recovered}}
-                </td>
-                <td>
-                   {{this.deaths}}
-                </td>
-             </tr> 
-           {{/each}}     
-         </tbody>
-       </table>
-     </div>
-</section>
-<footer class="top-footer-section font-small special-color-dark pt-4">
-      <div class="container">
-        <div class="row">
-           <div class="col-md-5 mb-4 pt-1 left-footer-section">
-            <a href="https://www.pmcares.gov.in/en/web/contribution/donate_india">Donate To Pm care Fund test <i class="fas fa-hand-holding-usd pl-2 "></i></a>   
-         </div>
-         <div class="col-md-2"></div>
-         <div class="col-md-5  mb-4 pt-1 right-footer-section">
-            <a href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN">Download Arogya Setu App<i class="fab fa-google-play pl-2 "></i></a>
-         </div>
-       </div>
-     </div>
-     </footer>
-     </div>
+  <!---End of Card Section-->
+  
+  <section class="section_heading">
+    <div style="max-width: 1180px;">
+    <div class="container-fluid">
+      <div class="row" style="justify-content: space-around">
+        <div>
+          <h2>
+            Cases of Coronavirus in All States
+          </h2>
+        </div>
+        <div>
+          <h5 style="text-align:center;">Last Updated: {{lastUpdated}}</h5>
+        </div>
+      </div>
+    </div>
+    {{!-- </div> --}}
+    <div class="list_table table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">State</th>
+            <th scope="col" id="Total">Total</th>
+            <th scope="col" id="Active">Active</th>
+            <th scope="col" id="recover">Recovered</th>
+            <th scope="col" id="death">Death</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each cdata}}
+          <tr>
+            <td>
+              {{this.state}}
+            </td>
+            <td>
+              {{this.confirmed}}
+            </td>
+            <td>
+              {{this.active}}
+            </td>
+            <td>
+              {{this.recovered}}
+            </td>
+            <td>
+              {{this.deaths}}
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </section>
+
+  <footer class="top-footer-section font-small special-color-dark pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 mb-4 pt-1 left-footer-section">
+          <a href="https://www.pmcares.gov.in/en/web/contribution/donate_india">Donate To Pm care Fund test <i
+              class="fas fa-hand-holding-usd pl-2 "></i></a>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5  mb-4 pt-1 right-footer-section">
+          <a href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN">Download Arogya Setu
+            App<i class="fab fa-google-play pl-2 "></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  </center>
 
 
 
 
-      <!-- javascript counter up plugin cdn -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-      <!-- javascript counter up  cdn -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous"></script>
-      
-      <!-- javascript counter code -->
+  <!-- javascript counter up plugin cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <!-- javascript counter up  cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+    integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+    crossorigin="anonymous"></script>
 
-        
-  </body>
+  <!-- javascript counter code -->
+
+
+</body>
 
 <!-- javascript -->
 
 <script>
-    $('.countup').counterUp({
-           delay: 9,
-            time: 1000
-         });  
-        </script>
+  $('.countup').counterUp({
+    delay: 9,
+    time: 1000
+  });  
+</script>
 
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
 </html>
