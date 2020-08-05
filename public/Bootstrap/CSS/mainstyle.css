@@ -1,5 +1,5 @@
-*{
-    
+body{
+    margin:auto;
     padding:0px;
     box-sizing:border-box;
 }
@@ -275,6 +275,7 @@ th {
 }
 .fourth-section img{
     border-radius:50%;
+    
 }
 
 
@@ -1119,41 +1120,7 @@ th {
         margin:auto;
         margin-top:60px;
     }
-    /* .covid-section-1 h2{
-         padding-top:10px;
-         padding-bottom:20px;
-         font-weight:500px;
-         font-size:26px;
-    }
-    .covid-section-2{
-        margin:5px;
-    }
-    .covid-section-2 h2{
-        padding-top:10px;
-        padding-bottom:20px;
-        font-weight:500px;
-        font-size:26px;
-    }
-    .covid-section-2 img{
-        border-radius: 50%;
-        width:95%;
-        margin:auto;
-    }
-    .covid-section-3{
-        margin:5px;
-    }
-    .covid-section-3 h2{
-        padding-top:10px;
-        padding-bottom:20px;
-        font-weight:500px;
-        font-size:26px;
-    }
-    .covid-section-3 img{
-        border-radius: 50%;
-        width:95%;
-        margin:auto;
-        margin-top:60px;
-    }*/
+    
     
     
 } 
@@ -1178,6 +1145,7 @@ th {
     }
     .covid-section-2{
         margin:0px;
+        color:#29b6f6
     }
     .covid-section-2 h2{
          text-align:center;
