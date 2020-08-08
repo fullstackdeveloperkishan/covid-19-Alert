@@ -13,13 +13,27 @@
   <!-- favicon icons  -->
   <link rel="icon" type="image/png" href="">
   <!-- javascript CSS -->
-  <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
-  <link rel="stylesheet" href="Bootstrap/CSS/mainstyle.css">
+  <link rel="stylesheet" href="public/Bootstrap/CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="public/Bootstrap/CSS/mainstyle.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="preload"
-    as="style" crossorigin>
+    as="style" crossorigin="true">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    crossorigin>
-  <script src="js/jquery-3.3.1.slim.min.js"></script>
+    crossorigin="true">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+
+
+<script src="map.js"></script>
+<!-- javascript counter up plugin cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <!-- javascript counter up  cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+    integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+    crossorigin="anonymous"></script>
+
+<script src="public/js/popper.min.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
 
   <!-- font added -->
   
@@ -316,7 +330,7 @@
             </div>
 
             <div class="col-lg-5 col-md-6">
-              <img class="img-fluid" src="images/covid65.png " alt="mycaroselpic">
+              <img class="img-fluid" src="public/images/covid65.png " alt="mycaroselpic">
             </div>
           </div>
         </div>
@@ -449,98 +463,10 @@
   </footer>
   </div>
   </center>
-
-
-
-
-  <!-- javascript counter up plugin cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-  <!-- javascript counter up  cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
-    integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
-    crossorigin="anonymous"></script>
-
   <!-- javascript counter code -->
-
-
 </body>
 
 <!-- javascript -->
 
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
-<script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiaGFycnkxMjM0OTgiLCJhIjoiY2s4OXh1c3BqMGFsZzNvbXA3YmYyaGFhYSJ9.wmVMiMxlSqpzJPsj-UXr3Q';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v10',
-    zoom: 3.2,
-    center: [80,23]
-  });
-  
-function updateMap() {
-    // console.log("Updating map with realtime data"
-    fetch("https://disease.sh/v3/covid-19/countries")
-        .then(response => response.json())
-        .then(data => {
-            for (var i = 0; i < data.length; i++) {
-                var latitude = data[i].countryInfo.lat
-                var longitude = data[i].countryInfo.long
-                var mapDeaths = data[i].deaths
-
-                var cases = data[i].cases
-
-                if (cases > 5000000) {
-                    color = "rgb(20,0,0)"
-                }  else if (cases > 1000000 && cases <= 5000000) {
-                    color = "rgb(40,0,0)"
-                }else if (cases > 100000 && cases <= 1000000) {
-                    color = "rgb(100,0,0)"
-                } else if (cases > 50000 && cases <= 100000) {
-                    color = "rgb(179,0,0)"
-                } else if ( cases > 5000 && cases <= 50000) {
-                    color = "rgb(218,0,0)"
-                }  else if (cases > 1000 && cases <= 5000) {
-                    color = "rgb(255,191,0)"
-                } else {
-                    color = "rgb(0,179,0)"
-                }
-                
-                new mapboxgl.Marker({
-                    draggable: false,
-                    color: color,
-                    
-                })
-                
-                 .setLngLat([longitude, latitude])
-                .addTo(map); 
-                
-            
-            }
-
-         })
-    }
-        
-          
-
-updateMap();
-
-
-</script>
-
-
-
-
-<script>
-  $('.countup').counterUp({
-    delay: 9,
-    time: 1000
-  });  
-</script>
-<script src="app.js"></script>
-<script src="map.js"></script>
-
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 
 </html>

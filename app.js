@@ -1,9 +1,8 @@
-//all the express modules
-const express = require('express')
+const express = require('express');
 const app = express();
-const https = require('https').createServer(app)
-const request = require('request')
-const hbs = require('hbs')
+const https = require('https').createServer(app);
+const request = require('request');
+const hbs = require('hbs');
 
 //use express application
 
@@ -12,7 +11,7 @@ const hbs = require('hbs')
 //set view point of handlebars (hbs)
 app.set('view engine', 'hbs')
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/'));
 
 //API call 
 //const (url) ="https://api.covid19api.com/summary";
