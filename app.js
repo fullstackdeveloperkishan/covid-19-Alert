@@ -1,11 +1,12 @@
 //all the express modules
 const express = require('express')
-const https = require('https')
+const app = express();
+const https = require('https').createServer(app)
 const request = require('request')
 const hbs = require('hbs')
 
 //use express application
-const app = express();
+
 
 
 //set view point of handlebars (hbs)
@@ -98,7 +99,8 @@ request({url: url}, (error , response) => {
 
 
 //loacal host
+
 app.listen(3007,() => {
     console.log("server is working");
-    
+    // console.log(https);
 })
