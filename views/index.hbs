@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+ <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+ 
+
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -366,14 +370,21 @@
     </div>
   </div>
   <!---End of Card Section-->
+
+<div class="maps" style="padding: 35px 40px; background-color:  #1f2222;;">
+  <h3 class="map-heading" style="font-weight: 900; margin-right:4rem;">Coronavirus World Map</h3>
+   <div id='map' style="width: 90vw;height: 70vh; border-radius:1rem ;margin-top:40px;"></div>
+</div>
+ 
+
   
   <section class="section_heading">
     <div style="max-width: 1180px;">
     <div class="container-fluid">
       <div class="row" style="justify-content: space-around">
         <div>
-          <h2>
-            Cases of Coronavirus in All States
+          <h2 style="font-weight: 400;">
+            Cases of Coronavirus in All States of India
           </h2>
         </div>
         <div>
@@ -381,12 +392,14 @@
         </div>
       </div>
     </div>
+
+
     {{!-- </div> --}}
     <div class="list_table table-responsive">
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">State</th>
+            <th scope="col" id="estate">State</th>
             <th scope="col" id="Total">Total</th>
             <th scope="col" id="Active">Active</th>
             <th scope="col" id="recover">Recovered</th>
@@ -454,6 +467,25 @@
 </body>
 
 <!-- javascript -->
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaGFycnkxMjM0OTgiLCJhIjoiY2s4OXh1c3BqMGFsZzNvbXA3YmYyaGFhYSJ9.wmVMiMxlSqpzJPsj-UXr3Q';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    zoom: 1,
+    center: [0,20]
+  });
+</script>
+
+<script src="app.js"></script>
+
+
+
+
+
+
 
 <script>
   $('.countup').counterUp({

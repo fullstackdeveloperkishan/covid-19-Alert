@@ -17,6 +17,9 @@
     letter-spacing: 1px;
     font-size:22px;
 }
+#estate {
+    width:35%;
+}
 .spacer{
     flex:4;
 }
