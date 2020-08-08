@@ -17,6 +17,7 @@ app.use(express.static(__dirname + '/public'));
 //API call 
 //const (url) ="https://api.covid19api.com/summary";
 const url = "https://api.covid19india.org/data.json";
+const mapUrl = "https://disease.sh/v3/covid-19/countries";
 
 app.get('/teams',(req,res)=>{
   res.render('teams');
@@ -48,7 +49,7 @@ request({url: url}, (error , response) => {
      const dailyRecovered =coronadata['statewise'][0].deltarecovered.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
      const dailyDeaths =coronadata['statewise'][0].deltadeaths.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-
+    
      //list of covid data code
      
      var cdata = coronadata['statewise'];
@@ -67,10 +68,6 @@ request({url: url}, (error , response) => {
 
 
       //chart
-     
-      
-      
-      
       
 
   //getting data from server
@@ -81,7 +78,7 @@ request({url: url}, (error , response) => {
        totaldeaths: Deaths,
        totalrecovered: Recovered,
        lastUpdated: LastUpdated,
-
+      
        //daily increase
       increaseConfirmed: dailyConfirmed,
       increaseRecovered:  dailyRecovered,
@@ -97,7 +94,9 @@ request({url: url}, (error , response) => {
     
 })
 
-
+      
+        
+  
 //loacal host
 
 app.listen(3007,() => {

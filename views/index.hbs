@@ -339,27 +339,27 @@
           <div class="row">
             <div class="card text-center" id="card1">
               <div class="card-body ">
-                <h5 class="card-title" id="title1">Total Confirmed<span style="font-size:25px; font-weight:900;"> <span
+                <h5 class="card-title" id="title1"> <span style="font-weight:bold; font-size: 18px">Total Confirmed</span> <span style="font-size:25px; font-weight:900;"> <span
                       class="countup">{{totalconfirmed}}</span></span><br> <span class="p-1 fa fa-angle-up"></span><span
                     class="countup">{{increaseConfirmed}}</span></span></h5>
               </div>
             </div>
             <div class="card text-center" id="card2">
               <div class="card-body ">
-                <h5 class="card-title" id="title2">Total Active<br> <span style="font-size:25px;font-weight:900;"><span
+                <h5 class="card-title" id="title2"><span style="font-weight:bold; font-size: 18px">Total Active</span><br> <span style="font-size:25px;font-weight:900;"><span
                       class="countup">{{totalactive}}</span></span></h5>
               </div>
             </div>
             <div class="card text-center" id="card3">
               <div class="card-body ">
-                <h5 class="card-title" id="title3">Recovered<span style="font-size:25px;font-weight:900;"><br><span
+                <h5 class="card-title" id="title3"><span style="font-weight:bold; font-size: 18px"> Recovered</span><span style="font-size:25px;font-weight:900;"><br><span
                       class="countup">{{totalrecovered}}</span></span><br><span class="p-1 fa fa-angle-up"></span><span
                     class="countup">{{increaseRecovered}}</span></span></h5>
               </div>
             </div>
             <div class="card text-center" id="card4">
               <div class="card-body ">
-                <h5 class="card-title" id="title4">Deaths<span style="font-size:25px;font-weight:900;"><br><span
+                <h5 class="card-title" id="title4"><span style="font-weight:bold; font-size: 18px">Deaths</span><span style="font-size:25px;font-weight:900;"><br><span
                       class="countup">{{totaldeaths}}</span></span> <br><span class="p-1 fa fa-angle-up"></span><span
                     class="countup">{{increaseDeaths}}</span></span></h5>
               </div>
@@ -372,7 +372,7 @@
   <!---End of Card Section-->
 
 <div class="maps" style="padding: 35px 40px; background-color:  #1f2222;;">
-  <h3 class="map-heading" style="font-weight: 900; margin-right:4rem;">Coronavirus World Map</h3>
+  <h3 class="map-heading" style="font-weight: 900; margin-right:4rem; color: white;">Coronavirus World Map</h3>
    <div id='map' style="width: 90vw;height: 70vh; border-radius:1rem ;margin-top:40px;"></div>
 </div>
  
@@ -474,15 +474,59 @@
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v10',
-    zoom: 1,
-    center: [0,20]
+    zoom: 3.2,
+    center: [80,23]
   });
+  
+function updateMap() {
+    // console.log("Updating map with realtime data"
+    fetch("https://disease.sh/v3/covid-19/countries")
+        .then(response => response.json())
+        .then(data => {
+            for (var i = 0; i < data.length; i++) {
+                var latitude = data[i].countryInfo.lat
+                var longitude = data[i].countryInfo.long
+                var mapDeaths = data[i].deaths
+
+                var cases = data[i].cases
+
+                if (cases > 5000000) {
+                    color = "rgb(20,0,0)"
+                }  else if (cases > 1000000 && cases <= 5000000) {
+                    color = "rgb(40,0,0)"
+                }else if (cases > 100000 && cases <= 1000000) {
+                    color = "rgb(100,0,0)"
+                } else if (cases > 50000 && cases <= 100000) {
+                    color = "rgb(179,0,0)"
+                } else if ( cases > 5000 && cases <= 50000) {
+                    color = "rgb(218,0,0)"
+                }  else if (cases > 1000 && cases <= 5000) {
+                    color = "rgb(255,191,0)"
+                } else {
+                    color = "rgb(0,179,0)"
+                }
+                
+                new mapboxgl.Marker({
+                    draggable: false,
+                    color: color,
+                    
+                })
+                
+                 .setLngLat([longitude, latitude])
+                .addTo(map); 
+                
+            
+            }
+
+         })
+    }
+        
+          
+
+updateMap();
+
+
 </script>
-
-<script src="app.js"></script>
-
-
-
 
 
 
@@ -493,6 +537,8 @@
     time: 1000
   });  
 </script>
+<script src="app.js"></script>
+<script src="map.js"></script>
 
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
