@@ -1,14 +1,9 @@
 *{
-    
     padding:0px;
     box-sizing:border-box;
 }
-
 .TopNavigation{
     background-image: linear-gradient(to bottom, #0b0808, #361213, #5f1317, #890e17, #b3040f); 
-}
-p{
-    font-size:18px;
 }
 .logo{
     text-align:center;
@@ -34,30 +29,20 @@ p{
 .bottomHeader ul{
     float:right;
 }
-h3{
-    color:#fff;
-    
-}
+
 .bottomHeader ul li a{
     font-size:1.4rem;
     margin-left:10px;
     font-weight:900;
-    /* font-family:'MarkProHeavy';   */
-    /* font-family: 'Montserrat', sans-serif;  */
-    
-     /* font-weight: 900; */
-  font-style: normal;
-  font-display: swap;
-     /* font-family: 'RubikBold';  */
-}
+    font-style: normal;
+    font-display: swap;
+    }
 .bottomHeader ul li a:hover{
     text-decoration:underline;
     background: -webkit-linear-gradient(rgba(194, 72, 72, 0), rgb(229, 9, 20));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
-    /* font-family: 'Montserrat', sans-serif; */
 }
-
 .navbar-nav li a{
    color: #0000;
 }
@@ -74,19 +59,6 @@ h3{
     color:#ffff;
     margin-left:60px;
     margin-top: 40px;
-}
-.header_content h4,h3,h2{
-    font-size:28px;
-    margin-top:10px;
-    margin-left:70px;
-    font-weight: 850;
-    /* font-family: 'Montserrat-lite', sans-serif; */
-}
-.header_content h2{
-    color:red;
-}
-.header_content h4{
-    /* font-family: 'Montserrat-lite', sans-serif; */
 }
 .header_content img{
     max-width:60%;
@@ -208,6 +180,9 @@ th {
     font-size:18px;
     text-decoration:none;
 }
+.top-footer-section .left-footer-section a:hover{
+    color:rgb(165, 161, 161);
+}
 .top-footer-section .right-footer-section {
     background-color:#ee4908;
     height:40px;
@@ -215,74 +190,103 @@ th {
     text-align:center;
     cursor:pointer;
 }
-
-/* /* border: 1px solid #0b0808; */
-
+p{
+    font-size:18px;
+}
 /* Starting code of Awareness Page */
 .content-section{
     display:flex;
     flex-flow: column wrap;
+    margin:auto;
+   
+}
+.first-section-heading{
+    display:flex;
+    justify-content: space-around;
+    flex-direction:column;
 }
 .first-section-heading img{
-    width:80%;
-    margin-right:-30px;
+    width:90%;
+    border-radius:50%;
 }
-   
- .first-section-heading h3{
-     padding-bottom:8px;
-     font-weight:500px;
+.first-section-heading h3{
      font-size:24px;
      color:black;
+     font-weight:700;
  }
-
+ .second-section-heading{
+    display:flex;
+    justify-content: space-around;
+    flex-direction:column;
+ }
 .second-section-heading h3{
-    padding-bottom:8px;
-    color:black; 
+   color:black; 
     text-decoration:underline;
-    font-size:22px;
-   
+    font-weight:700;
 }
 
 .second-section-heading img{
-    border-radius: 50%;
-    margin-left:30px;
-    width:80%;
-    
-}
-.third-section-heading h3{
-     padding-bottom:14px;
-     font-weight:500px;
-   
+  width:90%;
+  border-radius:50%;
 }
 
-.third-section-heading p{
-   line-height: 1.5;
+.third-section-heading{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+.third-section-heading h3{
+     font-weight:700;
 }
 .third-section-heading img{
-    position:relative;
-    bottom:20px;
-    border-radius: 55%;
-    width:60%;
-    left:20px;
-    
+  width:90%;
+  border-radius:50%;
 }
 .fourth-section-heading{
     display:flex;
     flex-direction:column;
+    justify-content: space-between;
 }
-.fourth-section-heading p{
-    position:relative;
-    top:20px;
-    line-height:1.5;
-   
+.fourth-section-heading h3{
+   font-weight:700;
 }
-.fourth-section img{
+.fourth-section-heading img{
+    width:90%;
     border-radius:50%;
 }
 
-
-
 /* Ending section  of Awareness Page */
+/* starting code of covid-19 Page */
+.covid-19-section{
+    background-color:#f5fffe;
+}
+.covid-section-1{
+    margin:5px;
+}
+.covid-section-1 img{
+    width:95%;
+    margin:8px;
+}
+.covid-section-1 h2{
+    font-size:30px;
+    font-weight: 700;
+ }
+.covid-section-2 img{
+    width:95%;
+ }
+.covid-section-2 h2{
+    font-size:30px;
+    font-weight:700;
+ }
+.covid-section-3 img{
+    width:95%;
+ }
+.covid-section-3 h2{
+    font-size:30px;
+    font-weight:700;
+}
+
+/* Ending of the code of Covid-19 page */
 
 /*    Responsive Code  of Home Page  (Card Section)  */
 @media(min-width:1200px){
@@ -291,23 +295,7 @@ th {
           word-spacing: 1px;
           font-size:1.4rem;
      }
-    .header_content h4{
-        margin-top:30px;
-        font-size:2rem;
-        margin-left:50px;
-        font-weight:800;
-    }
-    .header_content h3{
-        font-size:2rem;
-        margin-left:50px;
-        font-weight:800;
-     }
-    .header_content h2{
-        font-size:2.3rem;
-        margin-left:50px;
-        font-weight:850;
-        }
-     .btn-section {
+   .btn-section {
         margin-top:10px;
        
      }
@@ -353,22 +341,7 @@ th {
           word-spacing: 1px;
           font-size:1.8rem;
      }
-     .header_content h4{
-        margin-top:30px;
-        font-size:2rem;
-        margin-left:50px;
-        font-weight:800;
-    }
-    .header_content h3{
-        font-size:2rem;
-        margin-left:50px;
-        font-weight:800;
-     }
-    .header_content h2{
-        font-size:2.3rem;
-        margin-left:50px;
-        font-weight:850;
-        }
+     
      .btn-section {
         margin-top:10px;
        
@@ -415,22 +388,6 @@ th {
           word-spacing: 1px;
           font-size:1.4rem;
      }
-    .header_content h4{
-        margin-top:30px;
-        font-size:2rem;
-        margin-left:50px;
-        font-weight:800;
-    }
-    .header_content h3{
-        font-size:2rem;
-        margin-left:50px;
-        font-weight:800;
-     }
-    .header_content h2{
-        font-size:2.3rem;
-        margin-left:50px;
-        font-weight:850;
-        }
      .btn-section {
         margin-top:10px;
        
@@ -445,7 +402,7 @@ th {
     }
     .header_content img{
         width:80%;
-        margin:auto 230px;
+        margin:auto 250px;
     }
     .section_heading h2{
         margin-left:0px;
@@ -479,26 +436,9 @@ th {
      #card1 {
          margin-bottom: 20px;
      }
-    .header_content h4{
-        margin-top:30px;
-        font-size:2rem;
-        margin-left:50px;
-        font-weight:800;
-    }
-    .header_content h3{
-        font-size:2rem;
-        margin-left:50px;
-        font-weight:800;
-     }
-    .header_content h2{
-        font-size:2.3rem;
-        margin-left:50px;
-        font-weight:850;
-        }
-     .btn-section {
+    .btn-section {
         margin-top:10px;
-       
-     }
+    }
     .top-btn{
         width: 25%;
         height:56px;
@@ -508,7 +448,7 @@ th {
         margin-left:-30px;
     }
     .header_content img{
-        margin:auto 150px;
+        margin:auto 120px;
     }
     .section_heading h2{
         margin-left:0px;
@@ -552,27 +492,10 @@ th {
           word-spacing: 2px;
           font-size:2.5rem;
           height:90px;
-         
-     }
-    .header_content h4{
-        font-size:2rem;
-        margin-left:50px;
-        font-weight:800;
-    }
-    .header_content h3{
-        font-size:2rem;
-        margin-left:50px;
-        font-weight:800;
-     }
-    .header_content h2{
-        font-size:2.3rem;
-        margin-left:50px;
-        font-weight:850;
-        }
-     .btn-section {
+         }
+    .btn-section {
         margin-top:10px;
-       
-     }
+    }
     .top-btn{
         width: 30%;
         height:50px;
@@ -630,22 +553,7 @@ th {
           font-size:1.9rem;
          
      }
-    .header_content h4{
-        font-size:1.8rem;
-        margin:auto;
-        font-weight:600;
-    }
-    .header_content h3{
-        font-size:1.9rem;
-         margin: 10px auto;
-        font-weight:500;
-     }
-    .header_content h2{
-        font-size:2.1rem;
-        margin:auto;
-        font-weight:650;
-        }
-     .btn-section {
+    .btn-section {
         margin-top:10px;
      }
     .top-btn{
@@ -702,24 +610,10 @@ th {
           font-size:1.5rem;
          
      }
-    .header_content h4{
-        font-size:1.6rem;
-        margin:auto;
-        font-weight:600;
-    }
-    .header_content h3{
-        font-size:1.7rem;
-         margin: 10px auto;
-        font-weight:500;
+    
+    .btn-section {
+        margin-top:10px;
      }
-    .header_content h2{
-        font-size:1.8rem;
-        margin:auto;
-        font-weight:650;
-        }
-        .btn-section {
-            margin-top:10px;
-         }
         .top-btn{
             width: 35%;
             height:56px;
@@ -727,20 +621,7 @@ th {
         .header_content  #btn2{
             margin-left:-30px;
         }
-     /* .btn-section {
-        margin-left:30px;
-        margin-top:10px;
-     }
-    .top-btn{
-        width: 40%;
-    }
-    .btn-section #btn1{
-         margin-left:10px;
-         margin-bottom:10px;
-     } 
-    .header_content  #btn2{
-        margin-left:-30px;
-    } */
+    
     .header_content img{
         width:300px;
         margin:auto 30px;
@@ -786,31 +667,14 @@ th {
           padding-top:25px;
           letter-spacing: 1px;
           font-size:1.4rem;
-         
-     }
-    .header_content h4{
-        font-size:1.2rem;
-        margin-left:10px;
-        font-weight:400;
-    }
-    .header_content h3{
-        font-size:1.4rem;
-        margin-left:-20px;
-        font-weight:500;
-     }
-    .header_content h2{
-        font-size:18px;
-        margin-left:-60px;
-        font-weight:550;
-        text-align:center;
-     }
+        }
     .top-btn{
         width: 70%;
         height:45px;
     }
-    .header_content  #btn2{
+    /* .header_content  #btn2{
         margin-left:-30px;
-    }
+    } */
     .header_content img{
         width:300px;
         margin:auto;
@@ -857,7 +721,18 @@ th {
      }
     
 }
-
+@media(max-width:251px){
+    .logo a{
+          padding-top:25px;
+          letter-spacing: 1px;
+          font-size:1.2rem;
+          /* margin-left:-60px; */
+        }
+    .top-btn{
+        width: 70%;
+        height:45px;
+    }
+}
 /*   Responsive code of Teams Pages */
 
 @media(max-width:290px){
@@ -870,424 +745,143 @@ th {
 }
 /* End of responsive code of Teams Pages */
 
+
+
+
+
+
 /* Starting of responsive code of awareness Page */
-
-
-
-@media(max-width:291px){
-    .TopNavigation{
-       height:30%;
-    }
-    .content-heading h2{
-       font-size:18px;
-       margin:0px;
-       padding-top:20px;
-       font-weight:600;
-    }
-   .first-section-heading img{
-       width:90%;
-       padding-left:25px;
-       padding-bottom:20px;
-   }
-   .first-section-heading h3{
-       font-size:18px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
-    }
-    .second-section-heading h3{
-       font-size:18px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
-    }
-    .second-section-heading img{
-       width:90%;
-       padding-left:0px;
-       margin-left:10px;
-   }
-   .third-section-heading h3{
-       font-size:19px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
-   }
-    .third-section-heading img{
-       width:85%;
-       padding-left:0px;
-       margin-left:-5px;
-   }
-   .fourth-section-heading h3{
-       font-size:19px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
-   }
-    .fourth-section-heading img{
-       width:85%;
-       padding-left:0px;
-       margin-left:20px;
-   }
-}
-@media(max-width:375px){
-   .TopNavigation{
-       height:30%;
-   }
-   .content-heading h2{
-       font-size:20px;
-       margin:0px;
-       padding-top:20px;
-       font-weight:600;
+@media(max-width:991px){
+    .first-section-heading{
+        justify-content: center;
     }
     .first-section-heading img{
-       width:90%;
-       padding-left:25px;
-       padding-bottom:20px;
-   }
-   .first-section-heading h3{
-       font-size:18px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
+        width:80%;
+        margin:8px 8px;
+        /* padding-top:0px; */
+     }
+     .second-section-heading .row{
+         display:flex;
+         flex-direction:column-reverse;
+     }
+      .second-section-heading img{
+         width:80%;
+         
+     }
+      .third-section-heading img{
+         width:80%;
        
-    }
-    .second-section-heading h3{
-       font-size:18px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
-       
-    }
-    .second-section-heading img{
-       width:90%;
-       padding-left:0px;
-       margin-left:10px;
-   }
-   .third-section-heading h3{
-       font-size:19px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
-       
-    }
-    .third-section-heading img{
-       width:85%;
-       padding-left:0px;
-       margin-left:-5px;
-   }
-   .fourth-section-heading h3{
-       font-size:19px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
-       
-    }
-    .fourth-section-heading img{
-       width:85%;
-       padding-left:0px;
-       margin-left:35px;
-   }
-   
-}
- @media(max-width:575px){
-  .TopNavigation{
-       height:30%;
-   }
-   .content-heading h2{
-       font-size:20px;
-       margin:0px;
-       padding-top:20px;
-       font-weight:600;
-    }
+     }
+     .fourth-section-heading .row{
+        display:flex;
+        flex-direction:column-reverse;
+     }
+    
+      .fourth-section-heading img{
+         width:80%;
+        
+     }
+     
+  }  
+@media(max-width:575px){
     .first-section-heading img{
-       width:90%;
-       padding-left:25px;
-       padding-bottom:20px;
-   }
-   .first-section-heading h3{
-       font-size:18px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
-       
-    }
-    .second-section-heading h3{
-       font-size:18px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
-       
-    }
+         width:80%;
+     }
     .second-section-heading img{
-       width:90%;
-       padding-left:0px;
-       margin-left:10px;
-   }
-   .third-section-heading h3{
-       font-size:19px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
-       
-    }
-    .third-section-heading img{
-       width:85%;
-       padding-left:0px;
-       margin-left:-5px;
-   }
-   .fourth-section-heading h3{
-       font-size:19px;
-       text-align:center;
-       font-weight:700;
-       margin-left:0px;
-       
-    }
-    .fourth-section-heading img{
-       width:85%;
-       padding-left:0px;
-       margin-left:35px;
-   }
-   
-}  
- 
-@media Screen and (min-width:576px){
-    .content-heading h2{
-        font-size:26px;
-        margin:0px;
-        padding-top:20px;
-        font-weight:600;
-     }
-     .first-section-heading img{
-        width:60%;
-        margin-left:120px;
-        padding-bottom:20px;
-
-    }
-    .first-section-heading h3{
-        font-size:24px;
-        text-align:center;
-        font-weight:700;
-        margin-left:0px;
-        letter-spacing: 0.2rem;
-        word-spacing: 1px;
-        
-     }
-     .second-section-heading h3{
-        font-size:24px;
-        text-align:center;
-        font-weight:700;
-        margin-left:0px;
-        
-     }
-     .second-section-heading img{
-        width:60%;
-        padding-left:0px;
-        margin-left:130px;
-    }
-    .third-section-heading h3{
-        font-size:24px;
-        text-align:center;
-        font-weight:700;
-        margin-left:0px;
-        
+         width:80%;
      }
      .third-section-heading img{
-        width:60%;
-        padding-left:0px;
-        margin-left:100px;
-    }
-    .fourth-section-heading h3{
-        font-size:24px;
-        text-align:center;
-        font-weight:700;
-        margin-left:0px;
-        
+         width:85%;
      }
      .fourth-section-heading img{
-        width:60%;
-        padding-left:0px;
-        margin-left:110px;
+         width:80%;
+      }
+ }  
+@media(max-width:375px){
+   .content-heading h3{
+       font-size:23px;
+       font-weight:700;
     }
-    
-}
-
-/*          Responsive Page of Covid-19 Page         */
-@media(min-width:1000px) and (max-width:1200px){
-    .covid-section-1 {
-        margin:5px;
+    .first-section-heading img{
+       width:80%;
     }
-    .covid-section-1 img{
-        border-radius: 50%;
-        width:95%;
-        margin:auto;
-        margin-top:60px;
-    }
-    /* .covid-section-1 h2{
-         padding-top:10px;
-         padding-bottom:20px;
-         font-weight:500px;
-         font-size:26px;
-    }
-    .covid-section-2{
-        margin:5px;
-    }
-    .covid-section-2 h2{
-        padding-top:10px;
-        padding-bottom:20px;
-        font-weight:500px;
-        font-size:26px;
-    }
-    .covid-section-2 img{
-        border-radius: 50%;
-        width:95%;
-        margin:auto;
-    }
-    .covid-section-3{
-        margin:5px;
-    }
-    .covid-section-3 h2{
-        padding-top:10px;
-        padding-bottom:20px;
-        font-weight:500px;
-        font-size:26px;
-    }
-    .covid-section-3 img{
-        border-radius: 50%;
-        width:95%;
-        margin:auto;
-        margin-top:60px;
-    }*/
-    
-    
-} 
- @media(max-width:990px){
-    .covid-section-1 {
-        margin:0px;
-    }
-    .covid-section-1 img{
-        width:80%;
-        margin-left:65px;
-    }
-    .covid-section-1 h2{
-         text-align:center;
-         font-size:34px;
-         margin-left:-5px;
-         font-weight: 750;
-         word-spacing:2px;
-         letter-spacing:2px;
-    }
-    .covid-section-1 p{
-        font-size: 23px;
-    }
-    .covid-section-2{
-        margin:0px;
-    }
-    .covid-section-2 h2{
-         text-align:center;
-         font-size:34px;
-         margin-left:-5px;
-         font-weight:750;
-         word-spacing:2px;
-         letter-spacing:2px;
-    }
-    .covid-section-2 p{
-        font-size: 23px;
-    }
-    .covid-section-2 img{
-        width:80%;
-        margin-left:70px;
-    }
-    
-    .covid-section-3 h2{
-        text-align:center;
-        font-size:34px;
-        margin-left:-5px;
-        font-weight:750;
-        word-spacing:2px;
-        letter-spacing:2px;
-    }
-    .covid-section-3 p{
-        font-size: 23px;
-    }
-    .covid-section-3 img{
-        width:80%;
-        
-        margin-left:70px;
-    }
-}  
-
-@media(max-width:750px){
-    .covid-section-1 {
-        margin:0px;
-    }
-    .covid-section-1 img{
-        width:80%;
-        margin-left:55px;
-    }
-    .covid-section-1 h2{
-         text-align:center;
-         font-size:34px;
-         margin-left:-5px;
-         font-weight: 750;
-         word-spacing:2px;
-         letter-spacing:2px;
-    }
-    .covid-section-1 p{
-        font-size: 21px;
-    }
-    .covid-section-2{
-        margin:0px;
-    }
-    .covid-section-2 h2{
-         text-align:center;
-         font-size:34px;
-         margin-left:-5px;
-         font-weight:750;
-         word-spacing:2px;
-         letter-spacing:2px;
-    }
-    .covid-section-2 p{
-        font-size: 21px;
-    }
-    .covid-section-2 img{
-        width:80%;
-        margin-left:55px;
-    }
-    
-    .covid-section-3 h2{
-        text-align:center;
-        font-size:34px;
-        margin-left:-5px;
-        font-weight:750;
-        word-spacing:2px;
-        letter-spacing:2px;
-    }
-    .covid-section-3 p{
-        font-size: 21px;
-    }
-    .covid-section-3 img{
-        width:80%;
-        margin-left:50px;
-    }
-}
-
-
-
-
-@media(max-width:450px){
-    .covid-section-1 {
-        margin:0px;
-    }
-    .covid-section-1 img{
-        width:80%;
-        margin-left:45px;
+    .first-section-heading h3{
+       font-size:22px;
+        font-weight:600;
+      } 
+    .second-section-heading h3{
+       font-size:22px;
+       font-weight:600;
+      }
+    .second-section-heading img{
+       width:80%;
+      
+   }
+   .third-section-heading h3{
+       font-size:22px;
+       font-weight:600;
        
     }
-    .covid-section-1 h2{
+    .third-section-heading img{
+       width:80%;
+   }
+   .fourth-section-heading h3{
+       font-size:22px;
+       font-weight:600;
+     }
+    .fourth-section-heading img{
+       width:80%;
+    }
+   
+} 
+ /*        Responsive  code of Covid-19 Page */ 
+@media(max-width:990px){
+    .covid-section-1 .row {
+        display:flex;
+        flex-direction:column;
+     }
+    .covid-section-1 img{
+        width:80%;
+    }
+   .covid-section-1 p{
+        font-size: 20px;
+    }
+    .covid-section-2 .row{
+        margin:0px;
+        display:flex;
+        flex-direction:column-reverse;
+    }
+    .covid-section-2 h2{
          text-align:center;
-         font-size:22px;
-         margin-left:-5px;
-         font-weight: 600;
+         font-size:30px;
+         font-weight:700;
+        }
+    .covid-section-2 p{
+        font-size: 20px;
+    }
+    .covid-section-2 img{
+        width:80%;
+       
+    }
+   .covid-section-3 h2{
+        text-align:center;
+        font-size:30px;
+        font-weight:700;
+    }
+    .covid-section-3 p{
+        font-size: 20px;
+    }
+    .covid-section-3 img{
+        width:80%;
+    }
+}  
+@media(max-width:450px){
+    .covid-section-1 img{
+        width:80%;
+    }
+    .covid-section-1 h2{
+         font-size:25px;
+         font-weight: 700;
     }
     .covid-section-1 p{
         font-size: 18px;
@@ -1296,135 +890,40 @@ th {
         margin:0px;
     }
     .covid-section-2 h2{
-         text-align:center;
-         font-size:22px;
-         margin-left:-5px;
-         font-weight:600;
+       font-size:25px;
+       font-weight:700;
     }
     .covid-section-2 img{
         width:80%;
-        margin-left:40px;
     }
     .covid-section-2 p{
         font-size: 18px;
     }
     .covid-section-3 h2{
-        text-align:center;
-        font-size:22px;
-        margin-left:-5px;
-        font-weight:600;
+        font-size:25px;
+        font-weight:700;
     }
     .covid-section-3 p{
         font-size: 18px;
     }
     .covid-section-3 img{
         width:80%;
-        margin-left:40px;
     }
 }
 
 @media(max-width:291px){
-    .covid-section-1 {
-        margin:0px;
-    }
-    .covid-section-1 img{
-        width:80%;
-        margin-left:20px;
-       
-    }
-    .covid-section-1 h2{
-         text-align:center;
-         font-size:18px;
-         margin-left:-5px;
-    }
     .covid-section-1 p{
-        font-size: 16px;
-    }
-    .covid-section-2{
-        margin:0px;
-    }
-    .covid-section-2 h2{
-         text-align:center;
-         font-size:18px;
-         margin-left:-5px;
+        font-size: 14px;
     }
     .covid-section-2 p{
         font-size: 14px;
     }
-    .covid-section-2 img{
-        width:80%;
-        margin-left:20px;
-    }
-    
-    .covid-section-3 h2{
-        text-align:center;
-        font-size:18px;
-        margin-left:-5px;
-    }
-    .covid-section-3 p{
+   .covid-section-3 p{
         font-size: 14px;
-    }
-    .covid-section-3 img{
-        width:80%;
-        margin-left:20px;
     }
 }
  
-/* @media(min-width:850px){
-    .covid-section-1 {
-        margin:0px;
-    }
-    .covid-section-1 img{
-        width:80%;
-        margin-left:65px;
-    }
-    .covid-section-1 h2{
-         text-align:center;
-         font-size:34px;
-         margin-left:-5px;
-         font-weight: 750;
-         word-spacing:2px;
-         letter-spacing:2px;
-    }
-    .covid-section-1 p{
-        font-size: 25px;
-    }
-    .covid-section-2{
-        margin:0px;
-    }
-    .covid-section-2 h2{
-         text-align:center;
-         font-size:34px;
-         margin-left:-5px;
-         font-weight:750;
-         word-spacing:2px;
-         letter-spacing:2px;
-    }
-    .covid-section-2 p{
-        font-size: 26px;
-    }
-    .covid-section-2 img{
-        width:80%;
-        margin-left:70px;
-    }
-    
-    .covid-section-3 h2{
-        text-align:center;
-        font-size:34px;
-        margin-left:-5px;
-        font-weight:750;
-        word-spacing:2px;
-        letter-spacing:2px;
-    }
-    .covid-section-3 p{
-        font-size: 26px;
-    }
-    .covid-section-3 img{
-        width:80%;
-        
-        margin-left:70px;
-    }
-} */
+
 
 @font-face {
     font-family: 'MarkPro';

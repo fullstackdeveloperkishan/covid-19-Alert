@@ -7,12 +7,13 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <link rel="stylesheet" href="Bootstrap/CSS/mainstyle.css">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,100;1,200;1,800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+ 
 <title>Covid-19</title>
 <style>
+ 
   .card{
       width:30%;
       height:60%;
@@ -29,7 +30,7 @@
      text-align:center; 
      position:relative;
      border-radius:50%;
-     left:80px;
+     left:10px;
      width:50%;
      height:70%;
      margin-left:auto;
@@ -42,9 +43,61 @@
    
 }
 .card:hover{
-   margin-top:-5px;
-    box-shadow:0px 0px 20px black;
+   margin-top:-2px;
+    box-shadow:0px 0px 10px black;
 }
+.social-media{
+  display:flex;
+  justify-content: center;
+
+}
+.social-media a{
+  display:flex;
+  background:#f5f6fa;
+  height:40px;
+  width:40px;
+  border-radius:50%;
+  margin:0 10px;
+  border-radius:8px;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  text-decoration:none;
+  box-shadow: 1px 4px 2px 2px #b6b7b9,
+             -6px -6px 10px -1px  rgba(255,255,255,0.7);
+   border:1px solid rgba(0,0,0,0);
+   transition: transform 0.5s;
+
+}
+.social-media a i{
+  font-size: 35px;
+  color:#3b5998;
+  transition:transform 0.5s;
+}
+.social-media a .fa-linkedin{
+  color:#00acee;
+}
+.social-media a .fa-instagram{
+  color:#f14843;
+}
+.social-media a:hover{
+   box-shadow: inset 4px 4px 10px -1px rgba(0,0,0,0.2),
+             -4px -4px 6px -1px  rgba(255,255,255,0.7),
+             -0.5px -0.5px 0px   rgba(255,255,255,1),
+              0.5px 0.5px 0px   rgba(0,0,0,0.15),
+               0px 12px 10px -10px rgba(0,0,0,0.05);
+   
+   border:1px solid rgba(0,0,0,0.01);
+   transform: translateY(2px);
+}
+.social-media a:hover i{
+  transform: scale(0.90);
+}
+.social-media a:hover i{
+  color:#777;
+}
+
+
 @media   Screen and (max-width: 1000px){
   .card{
     width: 100%;
@@ -62,18 +115,18 @@
 </head>
 <body>
    <center>
-  <div style="max-width:1440px;width:100%;">
+  <div style="max-width:1440px;width:100%; height:100%;">
   <div class='TopNavigation'>
     <header class="navigation">
         <div class="bottomHeader">
           <div class="container-fluid">
             <nav class="navbar navbar-dark  navbar-expand-md">
               <div class="logo">
-                 <a class="navbar-brand m-3"  href="/"> <span style="color:rgb(1, 79, 224)">Covid</span>-19<span class="logo-text"style="color:red">  Alert</span></a>
+                 <a class="navbar-brand m-3" style="font-weight: 900;" href="/"> <span style="color:rgb(1, 79, 224)">Covid</span>-19<span class="logo-text"style="color:red">  Alert</span></a>
               </div>
               <div class="spacer"></div>
               <button data-toggle="collapse" data-target="#navbarToggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse" id="navbarToggler">
+              <div class="collapse navbar-collapse"  style="flex-direction: column;" id="navbarToggler">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
                     <a class="nav-link" href="/">Home</a>
@@ -108,14 +161,17 @@
            <div class="card-deck">
              <div class="card">
                 <div class="card-header">
-                   <img  style="border:6px solid #ffd700;" class="card-img  m-2" src="images/IMG_7472.PNG" alt="Card image cap">
+                   <img  style="border:6px solid #ffcc00" class="card-img  m-2" src="images/pramod1.jpg" alt="Card image cap">
                 </div>
                 <div class="card-body">
+
                   <h5 style="color:rgb(28, 31, 30);" class="card-title">Pramod Barnwal</h5>
                   <p  style="color:rgb(28, 31, 30); " class="card-text">Front End Developer(NIIST, Bhopal)</p>
-                  <a style="color:rgb(20,144,228);" href="https://www.facebook.com/pramod.barnwal.10/" class="p-1" ><i class="fab fa-2x fa-facebook"></i></a>
-                  <a style="color:rgb(20, 144, 228);" href="https://www.linkedin.com/in/pramod-kumar-503570175/" class="p-1"><i class="fab fa-2x fa-linkedin"></i></a>
-                  <a style="color:rgb(224, 58, 28);" href="https://www.instagram.com/pk_barnwal/" class="p-1"><i class="fab fa-2x fa-instagram"></i></a>
+                  <div class="social-media">
+                  <a  href="https://www.facebook.com/pramod.barnwal.10/"><i class="fab fa-2x fa-facebook"></i></a>
+                  <a  href="https://www.linkedin.com/in/pramod-kumar-503570175/"><i class="fab fa-2x fa-linkedin"></i></a>
+                  <a  href="https://www.instagram.com/pk_barnwal/" class="p-1"><i class="fab fa-2x fa-instagram"></i></a>
+                </div>
                 </div>
                 <div>
                   
@@ -126,15 +182,18 @@
           <div class="col-lg-6">
             <div class="card-deck">
              <div class="card">
-                <div class="card-header">
-                  <img  style="border:6px solid  #ffcc00;" class= "card-img m-2" src="images/IMG_7472.PNG" alt="Card image cap">
+                <div class="card-header background-circle circle">
+                  <img  style="border:6px solid  #ffcc00;" class= "card-img m-2" src="images/kishan1.jpeg" alt="Card image cap" width="200px" height="200px">
                 </div>
                <div class="card-body">
                  <h5 style="color:rgb(28,31,30);" class="card-title">Kishan Gupta</h5>
                  <p style="color:rgb(28,31,30);" class="card-text">Full Stack Web-Developer(NIIST,Bhopal) </p>
-                 <a style="color:rgb(20,144,228);" href="https://www.facebook.com/profile.php?id=100022584036258" class="p-1"><i class="fab fa-2x fa-facebook"></i></a>
-                 <a style="color:rgb(20, 144, 228);" href="https://www.linkedin.com/in/kishan-gupta-b13539195/" class="p-1"><i class="fab fa-2x fa-linkedin"></i></a>
-                 <a style="color:rgb(248, 86, 58);" href="https://www.instagram.com/weed_say/" class="p-1"><i class="fab fa-2x fa-instagram"></i></a>
+                <div class="social-media">
+                  
+                 <a  href="https://www.facebook.com/profile.php?id=100022584036258" class="p-1"><i class="fab  fa-facebook"></i></a>
+                 <a  href="https://www.linkedin.com/in/kishan-gupta-b13539195/" class="p-1"><i class="fab  fa-linkedin"></i></a>
+                 <a  href="https://www.instagram.com/weed_say/" class="p-1"><i class="fab  fa-instagram"></i></a>
+                </div>
                </div>
                <div>
                 
