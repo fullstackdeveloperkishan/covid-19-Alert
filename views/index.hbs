@@ -13,13 +13,27 @@
   <!-- favicon icons  -->
   <link rel="icon" type="image/png" href="">
   <!-- javascript CSS -->
-  <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
-  <link rel="stylesheet" href="Bootstrap/CSS/mainstyle.css">
+  <link rel="stylesheet" href="public/Bootstrap/CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="public/Bootstrap/CSS/mainstyle.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="preload"
-    as="style" crossorigin>
+    as="style" crossorigin="true">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    crossorigin>
-  <script src="js/jquery-3.3.1.slim.min.js"></script>
+    crossorigin="true">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+
+
+<script src="map.js"></script>
+<!-- javascript counter up plugin cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <!-- javascript counter up  cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+    integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+    crossorigin="anonymous"></script>
+
+<script src="public/js/popper.min.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
 
   <!-- font added -->
   
@@ -316,7 +330,7 @@
             </div>
 
             <div class="col-lg-5 col-md-6">
-              <img class="img-fluid" src="images/covid65.png " alt="mycaroselpic">
+              <img class="img-fluid" src="public/images/covid65.png " alt="mycaroselpic">
             </div>
           </div>
         </div>
@@ -339,27 +353,27 @@
           <div class="row">
             <div class="card text-center" id="card1">
               <div class="card-body ">
-                <h5 class="card-title" id="title1">Total Confirmed<span style="font-size:25px; font-weight:900;"> <span
+                <h5 class="card-title" id="title1"> <span style="font-weight:bold; font-size: 18px">Total Confirmed</span> <span style="font-size:25px; font-weight:900;"> <span
                       class="countup">{{totalconfirmed}}</span></span><br> <span class="p-1 fa fa-angle-up"></span><span
                     class="countup">{{increaseConfirmed}}</span></span></h5>
               </div>
             </div>
             <div class="card text-center" id="card2">
               <div class="card-body ">
-                <h5 class="card-title" id="title2">Total Active<br> <span style="font-size:25px;font-weight:900;"><span
+                <h5 class="card-title" id="title2"><span style="font-weight:bold; font-size: 18px">Total Active</span><br> <span style="font-size:25px;font-weight:900;"><span
                       class="countup">{{totalactive}}</span></span></h5>
               </div>
             </div>
             <div class="card text-center" id="card3">
               <div class="card-body ">
-                <h5 class="card-title" id="title3">Recovered<span style="font-size:25px;font-weight:900;"><br><span
+                <h5 class="card-title" id="title3"><span style="font-weight:bold; font-size: 18px"> Recovered</span><span style="font-size:25px;font-weight:900;"><br><span
                       class="countup">{{totalrecovered}}</span></span><br><span class="p-1 fa fa-angle-up"></span><span
                     class="countup">{{increaseRecovered}}</span></span></h5>
               </div>
             </div>
             <div class="card text-center" id="card4">
               <div class="card-body ">
-                <h5 class="card-title" id="title4">Deaths<span style="font-size:25px;font-weight:900;"><br><span
+                <h5 class="card-title" id="title4"><span style="font-weight:bold; font-size: 18px">Deaths</span><span style="font-size:25px;font-weight:900;"><br><span
                       class="countup">{{totaldeaths}}</span></span> <br><span class="p-1 fa fa-angle-up"></span><span
                     class="countup">{{increaseDeaths}}</span></span></h5>
               </div>
@@ -372,7 +386,7 @@
   <!---End of Card Section-->
 
 <div class="maps" style="padding: 35px 40px; background-color:  #1f2222;;">
-  <h3 class="map-heading" style="font-weight: 900; margin-right:4rem;">Coronavirus World Map</h3>
+  <h3 class="map-heading" style="font-weight: 900; margin-right:4rem; color: white;">Coronavirus World Map</h3>
    <div id='map' style="width: 90vw;height: 70vh; border-radius:1rem ;margin-top:40px;"></div>
 </div>
  
@@ -449,52 +463,10 @@
   </footer>
   </div>
   </center>
-
-
-
-
-  <!-- javascript counter up plugin cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-  <!-- javascript counter up  cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
-    integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
-    crossorigin="anonymous"></script>
-
   <!-- javascript counter code -->
-
-
 </body>
 
 <!-- javascript -->
 
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
-<script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiaGFycnkxMjM0OTgiLCJhIjoiY2s4OXh1c3BqMGFsZzNvbXA3YmYyaGFhYSJ9.wmVMiMxlSqpzJPsj-UXr3Q';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v10',
-    zoom: 1,
-    center: [0,20]
-  });
-</script>
-
-<script src="app.js"></script>
-
-
-
-
-
-
-
-<script>
-  $('.countup').counterUp({
-    delay: 9,
-    time: 1000
-  });  
-</script>
-
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 
 </html>
