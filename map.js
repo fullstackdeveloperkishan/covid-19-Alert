@@ -139,11 +139,16 @@ async function updateMap() {
                 var el = document.createElement('div');
                 el.id = 'map';
 
-                new mapboxgl.Marker({
+                const marker = new mapboxgl.Marker({
                     draggable: false,
                     color: color,
 
                 }).setLngLat([longitude, latitude]).setPopup(popup).addTo(map);
+
+                const markerDiv = marker.getElement();
+
+                markerDiv.addEventListener('mouseenter', () => marker.togglePopup());
+                markerDiv.addEventListener('mouseleave', () => marker.togglePopup());
             }
 
         }
