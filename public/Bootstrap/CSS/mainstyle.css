@@ -137,6 +137,10 @@ th {
 .map-section{
     background-color: #212529;;
 }
+.map-section h2{
+    font-weight: 900;
+    color:white;
+}
 .description-color .row{
     display:flex;
     justify-content: space-around;
@@ -616,6 +620,10 @@ p{
      .top-footer-section .right-footer-section {
       width:98%;
     }
+    .map-section h2{
+        font-weight: 700;
+       
+    }
 }
 @media(max-width:450px){
     .logo a{
@@ -663,8 +671,14 @@ p{
     .top-footer-section .left-footer-section{
       width:98%;
      }
-     .top-footer-section .right-footer-section {
+     .top-footer-section .right-footer-section{
       width:98%;
+    }
+    .map-section h2{
+        font-weight:400;
+    }
+    .map-section #map{
+        height:20px;
     }
 }
 @media(max-width:290px){
