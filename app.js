@@ -84,13 +84,8 @@ request({url: url}, (error , response) => {
       increaseDeaths: dailyDeaths,
       //loopdata
       cdata
-
-
-     })
-
+    })
   })
-  
-    
 })
 
       

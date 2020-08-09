@@ -102,7 +102,7 @@ async function updateMap() {
     // console.log("Updating map with realtime data"
     $.ajax({
         url: "https://disease.sh/v3/covid-19/countries", success: async function (data) {
-            // var finalHoverdata = [];
+            var finalHoverdata = [];
             for (var i = 0; i < data.length; i++) {
                 var latitude = data[i].countryInfo.lat
                 var longitude = data[i].countryInfo.long
@@ -113,43 +113,46 @@ async function updateMap() {
                 var mapTests = data[i].tests
                 var cases = data[i].cases
                 var mapContinents = data[i].continents
-                var country = data[i].country
 
-                if (cases > 5000000) {
+                var hoverData = {
+                    latitude: latitude,
+                    longitude: longitude,
+                    mapDeaths: mapDeaths,
+                    mapCountry: mapCountry,
+                    mapRecovered: mapRecovered,
+                    mapActive: mapActive,
+                    mapTests: mapTests,
+                    mapCases: cases,
+                    mapContinents: mapContinents
+                }
+
+                finalHoverdata.push(hoverData)
+
+                if (cases > 50,00,000) {
                     color = "rgb(20,0,0)"
-                } else if (cases > 1000000 && cases <= 5000000) {
+                } else if (cases > 10,00,000 && cases <= 50,00,000) {
                     color = "rgb(40,0,0)"
-                } else if (cases > 100000 && cases <= 1000000) {
+                } else if (cases > 1,00,000 && cases <= 10,00,000) {
                     color = "rgb(100,0,0)"
-                } else if (cases > 50000 && cases <= 100000) {
+                } else if (cases > 50,000 && cases <= 1,00,000) {
                     color = "rgb(179,0,0)"
-                } else if (cases > 5000 && cases <= 50000) {
+                } else if (cases > 5000 && cases <= 50,000) {
                     color = "rgb(218,0,0)"
-                } else if (cases > 1000 && cases <= 5000) {
-                    color = "rgb(255,191,0)"
-                } else {
+                } else  (cases > 1000 && cases <= 5000) {
                     color = "rgb(0,179,0)"
                 }
 
-                var popup = new mapboxgl.Popup({ offset: 25 }).setText(
-                    country + ": Active Count: " + mapActive
-                );
-
-                // create DOM element for the marker
-                var el = document.createElement('div');
-                el.id = 'map';
-
-                const marker = new mapboxgl.Marker({
+                new mapboxgl.Marker({
                     draggable: false,
                     color: color,
 
-                }).setLngLat([longitude, latitude]).setPopup(popup).addTo(map);
-
-                const markerDiv = marker.getElement();
-
-                markerDiv.addEventListener('mouseenter', () => marker.togglePopup());
-                markerDiv.addEventListener('mouseleave', () => marker.togglePopup());
+                }).setLngLat([longitude, latitude]).addTo(map);
             }
+            // console.log(finalHoverdata);
+            this.mapArrayData = finalHoverdata;
+
+            console.log(this.mapArrayData, "Map array");
+            await loadMap();
 
         }
     });

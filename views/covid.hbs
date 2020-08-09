@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="public/Bootstrap/CSS/mainstyle.css">
 
   <!-- javascript CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,100;1,200;1,800&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  {{!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="preload"
+    as="style" crossorigin="true"> --}}
+  {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="true"> --}}
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="public/js/bootstrap.min.js"></script>
   <title>Covid-19</title>
@@ -25,17 +26,17 @@
     <div style="max-width:1440px;width:100%;">
       <div class='TopNavigation'>
         <header class="navigation" style="max-width:1180px;">
-<<<<<<< HEAD
             <div class="bottomHeader">
               <div class="container-fluid">
                 <nav class="navbar navbar-dark  navbar-expand-md">
-                  <div class="logo">
-                   <a class="navbar-brand m-3" style="font-weight: 900;" href="/"> <span style="color:rgb(1, 79, 224)">Covid</span>-19<span
-                      class="logo-text" style="color:red"> Alert</span></a>
-                 </div>
+                 <div class="logo">
+                  <a class="navbar-brand m-3" style="font-weight: 900;" href="/"> <span
+                      style="color:rgb(1, 79, 224)">Covid</span>-19<span class="logo-text" style="color:red">
+                      Alert</span></a>
+                </div>
                   <div class="spacer"></div>
                   <button data-toggle="collapse" data-target="#navbarToggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-                  <div class="collapse navbar-collapse" id="navbarToggler">
+                  <div class="collapse navbar-collapse"  style="flex-direction: column;" id="navbarToggler">
                     <ul class="navbar-nav">
                       <li class="nav-item ">
                         <a class="nav-link" href="/">Home</a>
@@ -57,61 +58,7 @@
         </header>
         </div>
         <br/>
-        <section class='covid-19-section'>
-          <div class="container">
-              <div class="covid-section-1" >
-                <div class="row">
-                  <div class="col-lg-4">
-                      <img  class="img-fluid" src="images/covid19.png" alt="corona-pic" width="350px" height="370px"/>
-                  </div>
-                  <div class="col-lg-8">
-                      <h2 style="text-decoration:underline;">What is Covid-19</h2>
-                      <p class="text-justify"> Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness
-                      and recover without requiring special treatment. Older people, and those with underlying medical
-                      problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more
-                      likely to develop serious illness. Protect yourself and others from infection by washing your hands
-                      or using an alcohol based rub frequently and not touching your face. The COVID-19 virus spreads primarily 
-                      through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s 
-                      important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).
-                    </p>
-                  </div>
-=======
-          <div class="bottomHeader">
-            <div class="container-fluid">
-              <nav class="navbar navbar-dark  navbar-expand-md">
-                <div class="logo">
-                  <a class="navbar-brand m-3" style="font-weight: 900;" href="/"> <span
-                      style="color:rgb(1, 79, 224)">Covid</span>-19<span class="logo-text" style="color:red">
-                      Alert</span></a>
-                </div>
-                <div class="spacer"></div>
-                <button data-toggle="collapse" data-target="#navbarToggler" type="button" class="navbar-toggler"><span
-                    class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarToggler">
-                  <ul class="navbar-nav">
-                    <li class="nav-item ">
-                      <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="/covid">Covid-19</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/awareness">Awareness</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/teams">Teams</a>
-                    </li>
-                  </ul>
->>>>>>> bf2fc43d72c1c5914650aa99cf227ae3250043e6
-                </div>
-              </nav>
-            </div>
-          </div>
-        </header>
-      </div>
-      <br />
-      <section class='covid-19-section'>
-        <div class="container">
+       <div class="container-fluid">
           <div class="covid-section-1">
             <div class="row">
               <div class="col-lg-4">
@@ -181,12 +128,12 @@
       <footer class="top-footer-section font-small special-color-dark pt-4">
         <div class="container">
           <div class="row">
-            <div class="col-md-5 mb-4 pt-1 left-footer-section">
+            <div class="col-md-5 left-footer-section">
               <a href="https://www.pmcares.gov.in/en/web/contribution/donate_india">Donate To Pm care Fund <i
                   class="fas fa-hand-holding-usd pl-2 "></i></a>
             </div>
             <div class="col-md-2"></div>
-            <div class="col-md-5  mb-4 pt-1 right-footer-section">
+            <div class="col-md-5   right-footer-section">
               <a href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN">Download Arogya Setu
                 App<i class="fab fa-google-play pl-2 "></i></a>
             </div>
