@@ -84,13 +84,8 @@ request({url: url}, (error , response) => {
       increaseDeaths: dailyDeaths,
       //loopdata
       cdata
-
-
-     })
-
+    })
   })
-  
-    
 })
 
       
@@ -98,7 +93,7 @@ request({url: url}, (error , response) => {
   
 //loacal host
 
-app.listen(3007,() => {
+app.listen(3008,() => {
     console.log("server is working");
     // console.log(https);
 })
