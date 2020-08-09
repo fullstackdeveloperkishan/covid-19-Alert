@@ -93,7 +93,6 @@ async function updateMap() {
                 var mapActive = data[i].active
                 var mapTests = data[i].tests
                 var cases = data[i].cases
-                var mapContinents = data[i].continent
                 var country = data[i].country
                 var flag = data[i].countryInfo.flag
 
@@ -116,10 +115,11 @@ async function updateMap() {
 
                 var popup = new mapboxgl.Popup({ offset: 25 })
                 .setHTML(
+                   
                 
-                "<b>Continent: </b>"+ mapContinents +"<b> Country: </b>"+ country +"<br/>"+
-                "<b>Cases: </b>"+ cases +"<b> Active: </b>"+ mapActive +"<br/>"+
-                "<b>Recovered: </b>"+ mapRecovered +"<b> Deaths: </b>"+ mapDeaths +"<br/>"+
+                "<b> Country: </b>"+ country +"<br>"+
+                "<b class='data'>Cases: </b>"+ cases +"<b class='data'> Active: </b>"+ mapActive +"<br/>"+
+                "<b class='data'>Recovered: </b>"+ mapRecovered +"<b> Deaths: </b>"+ mapDeaths +"<br/>"+
                 "<b>Tests: </b>"+ mapTests 
 
 

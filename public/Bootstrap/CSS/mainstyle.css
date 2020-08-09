@@ -70,7 +70,7 @@
     font-size: 14px;
     text-align:center;
     color: rgba(255,255,255,0.9);
-    background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+    background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #ff0000);
     background-size: 600%;
     animation: animate 16s linear infinite;
     border-radius: 15px;
@@ -100,7 +100,7 @@
     text-align:left;
     color:white;
     padding:12px;
-    background-color:#112e8f;
+    background-color: #0000ff;
     /* font-family: 'RubikBold'; */
     height:60px;
 }
@@ -113,16 +113,16 @@
    
 }
 #Total{
-   color:#ffea00;
+   color:#ffff00;
 }
 #Active{
-   color:#76ff03;
+   color:#00cc00;
 }
 #recover{
-   color:#29b6f6;
+   color:#0000ff;
 }
 #death{
-color: #3CF0C5
+color: #ff0000;
 }
 td{
     color:rgb(247, 239, 239); 
@@ -165,7 +165,6 @@ th {
 .middle-section{
     width:100%;
     height:90%;
-    font-style: italic;
 
 }
 .card-deck{
@@ -174,7 +173,6 @@ th {
 .team_heading h2{
     padding:20px;
     color:rgb(161, 161, 161);
-    text-decoration:underline;
     font-weight: 250;
 }
    /* footer section  */
@@ -186,7 +184,7 @@ th {
 }
 
 .top-footer-section .left-footer-section{
-    background-color:#112e8f;
+    background-color: #0000ff;
     text-align:center;
     border-radius:10px;
     height:6vh;
