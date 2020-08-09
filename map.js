@@ -19,7 +19,7 @@ window.addEventListener("load", async function () {
 
 function counter() {
     $('.countup').counterUp({
-        delay: 9,
+        delay: 10,
         time: 1000
     });
 }
@@ -27,25 +27,7 @@ function counter() {
 function loadMap() {
     this.map.on('load', async function () {
             this.mapArrayData
-                map.addSource('places', {
-                    'type': 'geojson',
-                    'data': {
-                        'type': 'FeatureCollection',
-                        'features': [
-                            {
-                                'type': 'Feature',
-                                'properties': {
-                                    'description':
-                                        '<strong>Make it Mount Pleasant</strong><p>Make it Mount Pleasant is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>'
-                                },
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [-77.038659, 38.931567]
-                                }
-                            }
-                        ]
-                    }
-                });
+               
 
                 // Add a layer showing the places.
                 map.addLayer({
@@ -107,13 +89,14 @@ async function updateMap() {
                 var latitude = data[i].countryInfo.lat
                 var longitude = data[i].countryInfo.long
                 var mapDeaths = data[i].deaths
-                var mapCountry = data[i].country
                 var mapRecovered = data[i].recovered
                 var mapActive = data[i].active
                 var mapTests = data[i].tests
                 var cases = data[i].cases
-                var mapContinents = data[i].continents
+                var mapContinents = data[i].continent
                 var country = data[i].country
+                var flag = data[i].countryInfo.flag
+
 
                 if (cases > 5000000) {
                     color = "rgb(20,0,0)"
@@ -123,7 +106,7 @@ async function updateMap() {
                     color = "rgb(100,0,0)"
                 } else if (cases > 50000 && cases <= 100000) {
                     color = "rgb(179,0,0)"
-                } else if (cases > 5000 && cases <= 50000) {
+                } else if (cases > 5000 && cases <= 50000) {    
                     color = "rgb(218,0,0)"
                 } else if (cases > 1000 && cases <= 5000) {
                     color = "rgb(255,191,0)"
@@ -131,10 +114,17 @@ async function updateMap() {
                     color = "rgb(0,179,0)"
                 }
 
-                var popup = new mapboxgl.Popup({ offset: 25 }).setText(
-                    country + ": Active Count: " + mapActive
-                );
+                var popup = new mapboxgl.Popup({ offset: 25 })
+                .setHTML(
+                
+                "<b>Continent: </b>"+ mapContinents +"<b> Country: </b>"+ country +"<br/>"+
+                "<b>Cases: </b>"+ cases +"<b> Active: </b>"+ mapActive +"<br/>"+
+                "<b>Recovered: </b>"+ mapRecovered +"<b> Deaths: </b>"+ mapDeaths +"<br/>"+
+                "<b>Tests: </b>"+ mapTests 
 
+
+                );
+                    
                 // create DOM element for the marker
                 var el = document.createElement('div');
                 el.id = 'map';
@@ -143,7 +133,9 @@ async function updateMap() {
                     draggable: false,
                     color: color,
 
-                }).setLngLat([longitude, latitude]).setPopup(popup).addTo(map);
+                }).setLngLat([longitude, latitude])
+                .setPopup(popup)
+                .addTo(map);
 
                 const markerDiv = marker.getElement();
 
