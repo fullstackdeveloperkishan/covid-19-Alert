@@ -102,7 +102,7 @@ async function updateMap() {
     // console.log("Updating map with realtime data"
     $.ajax({
         url: "https://disease.sh/v3/covid-19/countries", success: async function (data) {
-            var finalHoverdata = [];
+            // var finalHoverdata = [];
             for (var i = 0; i < data.length; i++) {
                 var latitude = data[i].countryInfo.lat
                 var longitude = data[i].countryInfo.long
@@ -113,20 +113,7 @@ async function updateMap() {
                 var mapTests = data[i].tests
                 var cases = data[i].cases
                 var mapContinents = data[i].continents
-
-                var hoverData = {
-                    latitude: latitude,
-                    longitude: longitude,
-                    mapDeaths: mapDeaths,
-                    mapCountry: mapCountry,
-                    mapRecovered: mapRecovered,
-                    mapActive: mapActive,
-                    mapTests: mapTests,
-                    mapCases: cases,
-                    mapContinents: mapContinents
-                }
-
-                finalHoverdata.push(hoverData)
+                var country = data[i].country
 
                 if (cases > 5000000) {
                     color = "rgb(20,0,0)"
@@ -144,17 +131,25 @@ async function updateMap() {
                     color = "rgb(0,179,0)"
                 }
 
-                new mapboxgl.Marker({
+                var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+                    country + ": Active Count: " + mapActive
+                );
+
+                // create DOM element for the marker
+                var el = document.createElement('div');
+                el.id = 'map';
+
+                const marker = new mapboxgl.Marker({
                     draggable: false,
                     color: color,
 
-                }).setLngLat([longitude, latitude]).addTo(map);
-            }
-            // console.log(finalHoverdata);
-            this.mapArrayData = finalHoverdata;
+                }).setLngLat([longitude, latitude]).setPopup(popup).addTo(map);
 
-            console.log(this.mapArrayData, "Map array");
-            await loadMap();
+                const markerDiv = marker.getElement();
+
+                markerDiv.addEventListener('mouseenter', () => marker.togglePopup());
+                markerDiv.addEventListener('mouseleave', () => marker.togglePopup());
+            }
 
         }
     });
