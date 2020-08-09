@@ -1,9 +1,8 @@
-//all the express modules
-const express = require('express')
+const express = require('express');
 const app = express();
-const https = require('https').createServer(app)
-const request = require('request')
-const hbs = require('hbs')
+const https = require('https').createServer(app);
+const request = require('request');
+const hbs = require('hbs');
 
 //use express application
 
@@ -12,11 +11,12 @@ const hbs = require('hbs')
 //set view point of handlebars (hbs)
 app.set('view engine', 'hbs')
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/'));
 
 //API call 
 //const (url) ="https://api.covid19api.com/summary";
 const url = "https://api.covid19india.org/data.json";
+const mapUrl = "https://disease.sh/v3/covid-19/countries";
 
 app.get('/teams',(req,res)=>{
   res.render('teams');
@@ -48,7 +48,7 @@ request({url: url}, (error , response) => {
      const dailyRecovered =coronadata['statewise'][0].deltarecovered.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
      const dailyDeaths =coronadata['statewise'][0].deltadeaths.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-
+    
      //list of covid data code
      
      var cdata = coronadata['statewise'];
@@ -67,10 +67,6 @@ request({url: url}, (error , response) => {
 
 
       //chart
-     
-      
-      
-      
       
 
   //getting data from server
@@ -81,7 +77,7 @@ request({url: url}, (error , response) => {
        totaldeaths: Deaths,
        totalrecovered: Recovered,
        lastUpdated: LastUpdated,
-
+      
        //daily increase
       increaseConfirmed: dailyConfirmed,
       increaseRecovered:  dailyRecovered,
@@ -97,7 +93,9 @@ request({url: url}, (error , response) => {
     
 })
 
-
+      
+        
+  
 //loacal host
 
 app.listen(3007,() => {
