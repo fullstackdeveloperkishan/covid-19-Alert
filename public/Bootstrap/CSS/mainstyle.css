@@ -102,7 +102,7 @@
     padding:12px;
     background-color: #0000ff;
     /* font-family: 'RubikBold'; */
-    height:60px;
+
 }
 .list_table{
     background-color:#272424; 
@@ -172,6 +172,7 @@ th {
 }
 #demobox6{
     background-color:rgb(20,0,0);
+    border: 1px solid white;
     
 }
 
@@ -332,8 +333,6 @@ p{
 /* Ending of the code of Covid-19 page */
 
 /*    Responsive Code  of Home Page  (Card Section)  */
-<<<<<<< HEAD
-=======
  @media (min-width:2200px){ 
     .third-section{
         width:40%;
@@ -358,7 +357,6 @@ p{
         border-radius:1rem
     }
 } 
->>>>>>> c3aeb0eca2f2888fb0af079ec0fbd1a8842ff7df
 @media(min-width:1200px){
     .logo a{
           letter-spacing: 1px;
@@ -444,11 +442,11 @@ p{
        padding:9px 15px;
     }
     td{
-       font-size:20px;
+       font-size:16px;
     }
     th{
         width:20%;
-        font-size:20px;
+        font-size:18px;
     }
  
 }
