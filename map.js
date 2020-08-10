@@ -8,6 +8,8 @@ window.addEventListener("load", async function () {
         zoom: 3.2,
         center: [80, 23]
     });
+    // map.scrollZoom.disable();
+   
 
     mapArrayData = []
 
@@ -108,6 +110,8 @@ async function updateMap() {
                 } else if (cases > 5000 && cases <= 50000) {    
                     color = "rgb(218,0,0)"
                 } else if (cases > 1000 && cases <= 5000) {
+                    color = "rgb(255,191,0)"
+                } else {
                     color = "rgb(0,179,0)"
                 }
 
@@ -116,8 +120,8 @@ async function updateMap() {
                    
                 
                 "<b> Country: </b>"+ country +"<br>"+
-                "<b class='data'>Cases: </b>"+ cases +"<b class='data'> Active: </b>"+ mapActive +"<br/>"+
-                "<b class='data'>Recovered: </b>"+ mapRecovered +"<b> Deaths: </b>"+ mapDeaths +"<br/>"+
+                "<b >Cases: </b>"+ cases +"<b> Active: </b>"+ mapActive +"<br/>"+
+                "<b>Recovered: </b>"+ mapRecovered +"<b> Deaths: </b>"+ mapDeaths +"<br/>"+
                 "<b>Tests: </b>"+ mapTests 
 
 

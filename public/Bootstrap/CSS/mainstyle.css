@@ -147,21 +147,33 @@ th {
 }
 #demobox1 {
     background-color:rgb(0,179,0) ;
+    border: 1px solid white;
+
 }
 #demobox2 {
     background-color:rgb(218,0,0) ;
+    border: 1px solid white;
+
 }
 #demobox3{
     background-color:rgb(179,0,0) ;
+    border: 1px solid white;
+
 }
 #demobox4{
     background-color:rgb(100,0,0) ;
+    border: 1px solid white;
+
 }
 #demobox5{
     background-color:rgb(40,0,0) ;
+    border: 1px solid white;
+
 }
 #demobox6{
     background-color:rgb(20,0,0);
+    border: 1px solid white;
+
 }
 
 /*        end of Home Page  */
@@ -231,6 +243,7 @@ p{
     margin:auto;
    
 }
+
 .first-section-heading{
     display:flex;
     justify-content: space-around;
