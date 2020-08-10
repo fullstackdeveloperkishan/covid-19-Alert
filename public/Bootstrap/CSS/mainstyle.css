@@ -102,7 +102,7 @@
     padding:12px;
     background-color: #0000ff;
     /* font-family: 'RubikBold'; */
-    height:60px;
+
 }
 .list_table{
     background-color:#272424; 
@@ -135,12 +135,7 @@ th {
     text-align:left;
 }
 .map-section{
-    background-color: #212529;
-}
-.map-represent #map{
-    width:98%;
-    height: 70vh;
-    border-radius:1rem
+    background-color: #212529;;
 }
 .map-section h2{
     font-weight: 900;
@@ -152,21 +147,33 @@ th {
 }
 #demobox1 {
     background-color:rgb(0,179,0) ;
+    border: 1px solid white;
+
 }
 #demobox2 {
     background-color:rgb(218,0,0) ;
+    border: 1px solid white;
+
 }
 #demobox3{
     background-color:rgb(179,0,0) ;
+    border: 1px solid white;
+
 }
 #demobox4{
     background-color:rgb(100,0,0) ;
+    border: 1px solid white;
+
 }
 #demobox5{
     background-color:rgb(40,0,0) ;
+    border: 1px solid white;
+
 }
 #demobox6{
     background-color:rgb(20,0,0);
+    border: 1px solid white;
+    
 }
 
 /*        end of Home Page  */
@@ -236,6 +243,7 @@ p{
     margin:auto;
    
 }
+
 .first-section-heading{
     display:flex;
     justify-content: space-around;
@@ -415,7 +423,7 @@ p{
         margin-left:-30px;
     }
     .header_content img{
-        margin:auto 70px;
+        margin:auto 80px;
     }
     .section_heading h2{
         margin-left:-10px;
@@ -434,11 +442,11 @@ p{
        padding:9px 15px;
     }
     td{
-       font-size:20px;
+       font-size:16px;
     }
     th{
         width:20%;
-        font-size:20px;
+        font-size:18px;
     }
  
 }

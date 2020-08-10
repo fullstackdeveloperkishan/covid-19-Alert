@@ -8,6 +8,8 @@ window.addEventListener("load", async function () {
         zoom: 3.2,
         center: [80, 23]
     });
+    // map.scrollZoom.disable();
+   
 
     mapArrayData = []
 
@@ -116,8 +118,8 @@ async function updateMap() {
                    
                 
                 "<b> Country: </b>"+ country +"<br>"+
-                "<b class='data'>Cases: </b>"+ cases +"<b class='data'> Active: </b>"+ mapActive +"<br/>"+
-                "<b class='data'>Recovered: </b>"+ mapRecovered +"<b> Deaths: </b>"+ mapDeaths +"<br/>"+
+                "<b >Cases: </b>"+ cases +"<b> Active: </b>"+ mapActive +"<br/>"+
+                "<b>Recovered: </b>"+ mapRecovered +"<b> Deaths: </b>"+ mapDeaths +"<br/>"+
                 "<b>Tests: </b>"+ mapTests 
 
 
