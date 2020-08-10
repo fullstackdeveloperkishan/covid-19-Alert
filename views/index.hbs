@@ -47,7 +47,8 @@
     }
     .country_title h1 {
       color: white;
-      font-size: 30px;
+      font-size: 36px;
+      font-weight: 900; 
      }
     .country_title h5 {
       color: white;
@@ -402,15 +403,19 @@
 
 {{!-- Starting code of Map section --}}
 
-
- <div class="map-section">
-      <div class="container-fluid" >
-      <div class="row" >
-        <div class="col-lg-12" >
-          <h2 class="map-heading m-2" style="font-weight: 900;  color:white; padding:30px 0px 20px 0px;">Coronavirus World Map</h2>
+ <div class="map-section" >
+   <div class="third-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="map-heading m-2" style="color:white; padding:20px 0px 20px 0px;">Coronavirus World Map</h2>
         </div>
       </div>
-      <div id='map' style="width:95vw;height: 70vh; border-radius:1rem ;margin-top:5px;">
+     
+     <div class="map-represent" >
+         <div id='map'>
+     </div>
+    
       </div>
      </div>
       <div class="description-color">
@@ -436,23 +441,24 @@
            
            <div class="col-lg-4  col-md-4 col-sm-4 col-4" style="display:flex;flex-direction:row;">
               <div id="demobox3" style="width:32px;height:18px;"></div>
-               <p style="color:white; font-size:12px;" class="pl-2">Cases Between 50k-100k </p>
+               <p style="color:white; font-size:12px;" class="pl-2">Cases Between 5k-100k </p>
               
            </div>
             
            <div class="col-lg-4  col-md-4 col-sm-4 col-4" style="display:flex;flex-direction:row;">
                 <div id="demobox2" style="width:32px;height:18px;"></div>
-               <p style="color:white; font-size:12px;" class="pl-2">Cases Between 5k-50k</p>
+               <p style="color:white; font-size:12px;" class="pl-2">Cases Between 1k-5k</p>
          </div>
          <div class="col-lg-4  col-md-4 col-sm-4 col-4" style="display:flex;flex-direction:row;">
                <div id="demobox1" style="width:32px;height:18px;"></div>
-               <p style="color:white; font-size:12px;" class="pl-2">Cases Between 0-5k</p>
+               <p style="color:white; font-size:12px;" class="pl-2">Cases Between 0-1k</p>
               
          </div>
         </div>
        </div>
      </div>
     
+  </div>
   </div>
 
 
@@ -524,7 +530,7 @@
  <footer class="top-footer-section font-small special-color-dark pt-4">
     <div class="container">
       <div class="row">
-        <div class="col-md-5  left-footer-section">
+        <div class="col-md-5  left-footer-section" >
           <a href="https://www.pmcares.gov.in/en/web/contribution/donate_india" target="_blank">Donate To Pm care Fund<i
               class="fas fa-hand-holding-usd pl-2 "></i></a>
         </div>
