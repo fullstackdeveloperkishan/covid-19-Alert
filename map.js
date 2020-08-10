@@ -103,11 +103,11 @@ async function updateMap() {
                     color = "rgb(40,0,0)"
                 } else if (cases > 100000 && cases <= 1000000) {
                     color = "rgb(100,0,0)"
-                } else if (cases > 50000 && cases <= 100000) {
+                } else if (cases > 5000 && cases <= 100000) {
                     color = "rgb(179,0,0)"
-                } else if (cases > 5000 && cases <= 50000) {    
-                    color = "rgb(218,0,0)"
-                } else if (cases > 1000 && cases <= 5000) {
+                } else if (cases > 1000 && cases <= 5000) {    
+                    color = "rgb(255,234,0)"
+                } else if (cases > 0 && cases <= 1000) {
                     color = "rgb(0,179,0)"
                 }
 
