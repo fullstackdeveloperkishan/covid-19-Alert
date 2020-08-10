@@ -332,6 +332,33 @@ p{
 /* Ending of the code of Covid-19 page */
 
 /*    Responsive Code  of Home Page  (Card Section)  */
+<<<<<<< HEAD
+=======
+ @media (min-width:2200px){ 
+    .third-section{
+        width:40%;
+    }
+    .top-footer-section{
+       height:6vh;
+    }
+    .top-footer-section .left-footer-section{
+        height:3vh;
+        text-align:center;
+        padding-top:10px;
+    }
+    .top-footer-section .right-footer-section {
+        height:3vh;
+        text-align:center;
+        padding-top:10px;
+    }
+    
+    .map-represent #map{
+        width:55%;
+        height: 50vh;
+        border-radius:1rem
+    }
+} 
+>>>>>>> c3aeb0eca2f2888fb0af079ec0fbd1a8842ff7df
 @media(min-width:1200px){
     .logo a{
           letter-spacing: 1px;
@@ -358,12 +385,12 @@ p{
         font-size:34px;
         text-align:center;
     }
-    .section_heading h5{
+    /* .section_heading h5{
       font-size:26px;
       margin-left:-20px;
       height:55px;
       padding-top:8px;
-      }
+      } */
      
     .list_table{
        margin:2px 2px 0px 0px;
@@ -608,7 +635,7 @@ p{
     }
     .section_heading h5{
       font-size:26px;
-      margin-left:3px;
+      margin-left:2px;
       }
     .list_table{
        margin:2px 2px 0px 0px;
@@ -660,9 +687,10 @@ p{
         font-size:20px;
         text-align:center;
     }
-    .section_heading h5{
-       font-size:22px;
-       height:55px;
+    .section_heading h4{
+       font-size:20px;
+       height:58px;
+       /* padding-top:0px; */
     }
     .list_table{
        margin:2px 2px 0px 0px;
@@ -685,11 +713,9 @@ p{
       width:98%;
     }
     .map-section h2{
-        font-weight:400;
+        font-weight:600;
     }
-    .map-section #map{
-        height:20px;
-    }
+    
 }
 @media(max-width:290px){
     .logo a{
@@ -712,7 +738,7 @@ p{
         font-size:20px;
         text-align:center;
     }
-    .section_heading h5{
+    .section_heading h4{
        height:60px;
         font-size:20px;
     }
