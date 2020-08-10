@@ -135,7 +135,12 @@ th {
     text-align:left;
 }
 .map-section{
-    background-color: #212529;;
+    background-color: #212529;
+}
+.map-represent #map{
+    width:98%;
+    height: 70vh;
+    border-radius:1rem
 }
 .map-section h2{
     font-weight: 900;
@@ -320,6 +325,30 @@ p{
 /* Ending of the code of Covid-19 page */
 
 /*    Responsive Code  of Home Page  (Card Section)  */
+@media (min-width:2300px){
+    .third-section{
+        width:40%;
+    }
+    .top-footer-section{
+       height:6vh;
+    }
+    .top-footer-section .left-footer-section{
+        height:3vh;
+        text-align:center;
+        padding-top:10px;
+    }
+    .top-footer-section .right-footer-section {
+        height:3vh;
+        text-align:center;
+        padding-top:10px;
+    }
+    
+    .map-represent #map{
+        width:55%;
+        height: 50vh;
+        border-radius:1rem
+    }
+}
 @media(min-width:1200px){
     .logo a{
           letter-spacing: 1px;
@@ -382,11 +411,11 @@ p{
         height:50px;
         font-size:17px;
     }
-    .header_content  #btn2{
+    /* .header_content  #btn2{
         margin-left:-30px;
-    }
+    } */
     .header_content img{
-        margin:auto 80px;
+        margin:auto 70px;
     }
     .section_heading h2{
         margin-left:-10px;
