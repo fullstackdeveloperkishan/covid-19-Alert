@@ -260,8 +260,6 @@ p{
  }
  .second-section-heading{
     display:flex;
-    justify-content: space-around;
-    flex-direction:column;
  }
 .second-section-heading h3{
    color:black; 
@@ -492,6 +490,9 @@ p{
     }
 }
 @media (max-width:770px){
+    #rev {
+        flex-direction: column-reverse;
+    }
     .logo a{
           letter-spacing: 1px;
           word-spacing: 1px;
