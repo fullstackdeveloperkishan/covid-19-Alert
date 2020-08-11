@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const http = require('http')
+const https = require('https').createServer(app);
 const request = require('request');
 const hbs = require('hbs');
 
@@ -93,15 +93,9 @@ request({url: url}, (error , response) => {
   
 //loacal host
 
-const port = process.env.PORT || 3008
-const hostname = "0.0.0.0"
+const port = process.env.PORT || 3000
 
-const server = http.createServer((req, res) => {
-	res.statusCode = 200;
-  	res.setHeader('Content-Type', 'text/plain');
-  	res.end('This is the Admin Side!\n');
-});
-
-app.listen(port, hostname,() => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(port,() => {
+    console.log("server is working");
+    // console.log(https);
 })
