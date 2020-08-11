@@ -93,7 +93,9 @@ request({url: url}, (error , response) => {
   
 //loacal host
 
-app.listen(3008,() => {
+var port = process.env.PORT || 3000
+
+app.listen(port,() => {
     console.log("server is working");
     // console.log(https);
 })
