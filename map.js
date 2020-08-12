@@ -1,5 +1,5 @@
 window.addEventListener("load", async function () {
-    this.counter();
+   
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFycnkxMjM0OTgiLCJhIjoiY2s4OXh1c3BqMGFsZzNvbXA3YmYyaGFhYSJ9.wmVMiMxlSqpzJPsj-UXr3Q';
     map = new mapboxgl.Map({
@@ -8,6 +8,7 @@ window.addEventListener("load", async function () {
         zoom: 3.2,
         center: [80, 23]
     });
+
     map.scrollZoom.disable();
 
     map.addControl(
@@ -20,7 +21,6 @@ window.addEventListener("load", async function () {
     map.addControl(new mapboxgl.NavigationControl());
 
     
- 
 
     await this.updateMap();
     
@@ -28,55 +28,50 @@ window.addEventListener("load", async function () {
 }, true);
 
 
-function counter() {
-    $('.countup').counterUp({
-        delay: 10,
-        time: 1000
-    });
-}
+// function counter() {
+//     $('.countup').counterUp({
+//         delay: 10,
+//         time: 1000
+//     });
+// }
 
-function loadMap() {
-    this.map.on('load', async function () {
-         
-               
 
-             
+           
                
         // Create a popup, but don't add it to the map yet.
-        popup = new mapboxgl.Popup({
+        var popup = new mapboxgl.Popup({
             closeButton: false,
             closeOnClick: false
-        });
-
-        map.on('mouseenter', 'places', function (e) {
+            });
+        map.on('mouseenter', 'places', function(e) {
             // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
-
+             
             var coordinates = e.features[0].geometry.coordinates.slice();
             var description = e.features[0].properties.description;
-
+             
             // Ensure that if the map is zoomed out such that multiple
             // copies of the feature are visible, the popup appears
             // over the copy being pointed to.
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
-
+             
             // Populate the popup and set its coordinates
             // based on the feature found.
             popup
-                .setLngLat(coordinates)
-                .setHTML(description)
-                .addTo(map);
-        });
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+            });
 
-        map.on('mouseleave', 'places', function () {
-            map.getCanvas().style.cursor = '';
-            popup.remove();
-        });
+            map.on('mouseleave', 'places', function() {
+                map.getCanvas().style.cursor = '';
+                popup.remove();
+                });
 
-    });
-}
+
+
 
 
 
