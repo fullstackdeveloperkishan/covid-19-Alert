@@ -8,10 +8,19 @@ window.addEventListener("load", async function () {
         zoom: 3.2,
         center: [80, 23]
     });
-    // map.scrollZoom.disable();
-   
+    map.scrollZoom.disable();
 
-    mapArrayData = []
+    map.addControl(
+        new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+       
+        })
+        );
+
+    map.addControl(new mapboxgl.NavigationControl());
+
+    
+ 
 
     await this.updateMap();
     
@@ -28,20 +37,11 @@ function counter() {
 
 function loadMap() {
     this.map.on('load', async function () {
-            this.mapArrayData
+         
                
 
-                // Add a layer showing the places.
-                map.addLayer({
-                    'id': 'places',
-                    'type': 'symbol',
-                    'source': 'places',
-                    'layout': {
-                        'icon-image': 'custom-marker',
-                        'icon-allow-overlap': true
-                    }
-                });
-
+             
+               
         // Create a popup, but don't add it to the map yet.
         popup = new mapboxgl.Popup({
             closeButton: false,
