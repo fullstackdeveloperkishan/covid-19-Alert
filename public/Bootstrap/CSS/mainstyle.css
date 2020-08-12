@@ -1,6 +1,7 @@
 *{
     padding:0px;
     box-sizing:border-box;
+    
 }
 .TopNavigation{
     background-image: linear-gradient(to bottom, #0b0808, #361213, #5f1317, #890e17, #b3040f); 
@@ -29,14 +30,13 @@
 .bottomHeader ul{
     float:right;
 }
-
 .bottomHeader ul li a{
     font-size:1.4rem;
     margin-left:10px;
     font-weight:900;
     font-style: normal;
     font-display: swap;
-    }
+}
 .bottomHeader ul li a:hover{
     text-decoration:underline;
     background: -webkit-linear-gradient(rgba(194, 72, 72, 0), rgb(229, 9, 20));
@@ -102,15 +102,13 @@
     padding:12px;
     background-color: #0000ff;
     /* font-family: 'RubikBold'; */
-
+    height:60px;
 }
 .list_table{
     background-color:#272424; 
     border-radius:20px;
     margin:2px 2px 0px 0px;
     padding:6px;
-    
-   
 }
 #Total{
    color:#ffff00;
@@ -135,7 +133,12 @@ th {
     text-align:left;
 }
 .map-section{
-    background-color: #212529;;
+    background-color: #212529;
+}
+.map-represent #map{
+    width:98%;
+    height: 70vh;
+    border-radius:1rem
 }
 .map-section h2{
     font-weight: 900;
@@ -147,33 +150,21 @@ th {
 }
 #demobox1 {
     background-color:rgb(0,179,0) ;
-    border: 1px solid white;
-
 }
 #demobox2 {
     background-color:rgb(218,0,0) ;
-    border: 1px solid white;
-
 }
 #demobox3{
     background-color:rgb(179,0,0) ;
-    border: 1px solid white;
-
 }
 #demobox4{
     background-color:rgb(100,0,0) ;
-    border: 1px solid white;
-
 }
 #demobox5{
     background-color:rgb(40,0,0) ;
-    border: 1px solid white;
-
 }
 #demobox6{
     background-color:rgb(20,0,0);
-    border: 1px solid white;
-    
 }
 
 /*        end of Home Page  */
@@ -243,7 +234,6 @@ p{
     margin:auto;
    
 }
-
 .first-section-heading{
     display:flex;
     justify-content: space-around;
@@ -423,7 +413,7 @@ p{
         margin-left:-30px;
     }
     .header_content img{
-        margin:auto 80px;
+        margin:auto 70px;
     }
     .section_heading h2{
         margin-left:-10px;
@@ -442,11 +432,11 @@ p{
        padding:9px 15px;
     }
     td{
-       font-size:16px;
+       font-size:20px;
     }
     th{
         width:20%;
-        font-size:18px;
+        font-size:20px;
     }
  
 }
@@ -455,11 +445,10 @@ p{
           letter-spacing: 1px;
           word-spacing: 1px;
           font-size:1.4rem;
-     }
+    }
      .btn-section {
         margin-top:10px;
-       
-     }
+    }
     .top-btn{
         width: 25%;
         height:56px;
@@ -516,7 +505,7 @@ p{
         margin-left:-30px;
     }
     .header_content img{
-        margin:auto 120px;
+        margin:auto 120px;                /*  Changed Now */
     }
     .section_heading h2{
         margin-left:0px;
@@ -606,7 +595,7 @@ p{
 }
 @media(max-width:550px){
     .logo a{
-        padding-top:25px;
+          padding-top:25px;
           letter-spacing: 1px;
           word-spacing: 2px;
           font-size:1.9rem;
@@ -657,7 +646,9 @@ p{
     }
     .map-section h2{
         font-weight: 700;
-       
+    }
+    .description-container p{
+        font-size:6px;
     }
 }
 @media(max-width:450px){
@@ -715,6 +706,62 @@ p{
     }
     
 }
+/* @media(max-width:350px){
+    .logo a{
+        padding-top:25px;
+        letter-spacing: 1px;
+        font-size:1.5rem;
+    }
+    .btn-section {
+        margin-top:10px;
+     }
+    .top-btn{
+        width: 35%;
+        height:56px;
+    }
+    .header_content  #btn2{
+        margin-left:-30px;
+    }
+    .header_content img{
+        width:27
+        0px;
+        margin:auto 20px;
+    }
+    .section_heading h2{
+        margin-left:0px;
+        font-size:20px;
+        text-align:center;
+    }
+    .section_heading h4{
+       font-size:20px;
+       height:58px;
+       /* padding-top:0px; 
+    }
+    .list_table{
+       margin:2px 2px 0px 0px;
+    }
+    td{
+       font-size:10px;
+    }
+    th {
+        width:10%;
+        font-size:10px;
+    }
+    .top-footer-section{
+       padding-left:5px;
+    }
+    
+    .top-footer-section .left-footer-section{
+      width:98%;
+     }
+     .top-footer-section .right-footer-section{
+      width:98%;
+    }
+    .map-section h2{
+        font-weight:600;
+    }
+    
+} */
 @media(max-width:290px){
     .logo a{
           padding-top:25px;
@@ -765,7 +812,9 @@ p{
     .top-footer-section .left-footer-section a{
        font-size:14px;
      }
-    
+    .description-container p{
+        font-size:6px;
+    }
 }
 @media(max-width:251px){
     .logo a{
