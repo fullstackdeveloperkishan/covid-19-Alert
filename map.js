@@ -1,5 +1,5 @@
 window.addEventListener("load", async function () {
-   
+    this.counter();
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFycnkxMjM0OTgiLCJhIjoiY2s4OXh1c3BqMGFsZzNvbXA3YmYyaGFhYSJ9.wmVMiMxlSqpzJPsj-UXr3Q';
     map = new mapboxgl.Map({
@@ -8,19 +8,10 @@ window.addEventListener("load", async function () {
         zoom: 3.2,
         center: [80, 23]
     });
-
     map.scrollZoom.disable();
+    map.pinch
 
-    map.addControl(
-        new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-       
-        })
-        );
-
-    map.addControl(new mapboxgl.NavigationControl());
-
-    
+    mapArrayData = []
 
     await this.updateMap();
     
@@ -28,50 +19,64 @@ window.addEventListener("load", async function () {
 }, true);
 
 
-// function counter() {
-//     $('.countup').counterUp({
-//         delay: 10,
-//         time: 1000
-//     });
-// }
+function counter() {
+    $('.countup').counterUp({
+        delay: 10,
+        time: 1000
+    });
+}
 
-
-           
+function loadMap() {
+    this.map.on('load', async function () {
+            this.mapArrayData
                
+
+                // Add a layer showing the places.
+                map.addLayer({
+                    'id': 'places',
+                    'type': 'symbol',
+                    'source': 'places',
+                    'layout': {
+                        'icon-image': 'custom-marker',
+                        'icon-allow-overlap': true
+                    }
+                });
+
         // Create a popup, but don't add it to the map yet.
-        var popup = new mapboxgl.Popup({
+        popup = new mapboxgl.Popup({
             closeButton: false,
             closeOnClick: false
-            });
-        this.map.on('mouseenter', 'places', function(e) {
+        });
+
+        map.on('mouseenter', 'places', function (e) {
             // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
-             
+
             var coordinates = e.features[0].geometry.coordinates.slice();
             var description = e.features[0].properties.description;
-             
+
             // Ensure that if the map is zoomed out such that multiple
             // copies of the feature are visible, the popup appears
             // over the copy being pointed to.
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
-             
+
             // Populate the popup and set its coordinates
             // based on the feature found.
             popup
-            .setLngLat(coordinates)
-            .setHTML(description)
-            .addTo(map);
-            });
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
 
-            this.map.on('mouseleave', 'places', function() {
-                map.getCanvas().style.cursor = '';
-                popup.remove();
-                });
+        map.on('mouseleave', 'places', function () {
+            map.getCanvas().style.cursor = '';
+            popup.remove();
+        });
 
-
-
+    });
+}
 
 
 
@@ -100,11 +105,13 @@ async function updateMap() {
                     color = "rgb(40,0,0)"
                 } else if (cases > 100000 && cases <= 1000000) {
                     color = "rgb(100,0,0)"
-                } else if (cases > 5000 && cases <= 100000) {
+                } else if (cases > 50000 && cases <= 100000) {
                     color = "rgb(179,0,0)"
-                } else if (cases > 1000 && cases <= 5000) {    
-                    color = "rgb(255,234,0)"
-                } else if (cases > 0 && cases <= 1000) {
+                } else if (cases > 5000 && cases <= 50000) {    
+                    color = "rgb(218,0,0)"
+                } else if (cases > 1000 && cases <= 5000) {
+                    color = "rgb(255,191,0)"
+                } else {
                     color = "rgb(0,179,0)"
                 }
 
