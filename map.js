@@ -1,5 +1,5 @@
 window.addEventListener("load", async function () {
-    this.counter();
+    // this.counter();
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFycnkxMjM0OTgiLCJhIjoiY2s4OXh1c3BqMGFsZzNvbXA3YmYyaGFhYSJ9.wmVMiMxlSqpzJPsj-UXr3Q';
     map = new mapboxgl.Map({
@@ -8,23 +8,32 @@ window.addEventListener("load", async function () {
         zoom: 3.2,
         center: [80, 23]
     });
+    // disable map zoom when using scroll
     map.scrollZoom.disable();
-    map.pinch
+    
 
-    mapArrayData = []
+    map.addControl(
+        new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        })
+        );
+   
+    // Add zoom and rotation controls to the map.
 
+    map.addControl(new mapboxgl.NavigationControl());
+ 
     await this.updateMap();
     
     
 }, true);
 
 
-function counter() {
-    $('.countup').counterUp({
-        delay: 10,
-        time: 1000
-    });
-}
+// function counter() {
+//     $('.countup').counterUp({
+//         delay: 10,
+//         time: 1000
+//     });
+// }
 
 function loadMap() {
     this.map.on('load', async function () {
@@ -119,8 +128,8 @@ async function updateMap() {
                 .setHTML(
                    
                 
-                "<b> Country: </b>"+ country +"<br>"+
-                "<b >Cases: </b>"+ cases +"<b> Active: </b>"+ mapActive +"<br/>"+
+                "<b> Country: </b>"+ country +"<br/>"+
+                "<b>Cases: </b>"+ cases +"<b> Active: </b>"+ mapActive +"<br/>"+
                 "<b>Recovered: </b>"+ mapRecovered +"<b> Deaths: </b>"+ mapDeaths +"<br/>"+
                 "<b>Tests: </b>"+ mapTests 
 
