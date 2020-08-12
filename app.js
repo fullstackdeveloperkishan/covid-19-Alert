@@ -14,6 +14,7 @@ const hbs = require('hbs');
 app.set('view engine', 'hbs')
 
 app.use(express.static(__dirname + '/'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 //API call 
 //const (url) ="https://api.covid19api.com/summary";
@@ -71,6 +72,11 @@ request({url: url}, (error , response) => {
 
 
       //chart
+         
+     
+
+      
+      
       
 
   //getting data from server
