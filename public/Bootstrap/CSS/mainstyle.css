@@ -1,7 +1,6 @@
 *{
     padding:0px;
     box-sizing:border-box;
-    
 }
 .TopNavigation{
     background-image: linear-gradient(to bottom, #0b0808, #361213, #5f1317, #890e17, #b3040f); 
@@ -135,7 +134,7 @@ th {
 .map-section{
     background-color: #212529;
 }
-.map-represent #map{
+.map-section #map{
     width:98%;
     height: 70vh;
     border-radius:1rem
@@ -143,6 +142,9 @@ th {
 .map-section h2{
     font-weight: 900;
     color:white;
+}
+.description-color{
+    background-color:#212529;
 }
 .description-color .row{
     display:flex;
@@ -186,22 +188,25 @@ th {
 .top-footer-section{
     background-color: #000;
     width:100%;
-    height:12vh;
-    padding-left:30px;
+    height:10vh;
+    /* padding-left:30px; */
 }
 
 .top-footer-section .left-footer-section{
     background-color: #0000ff;
     text-align:center;
     border-radius:10px;
-    height:6vh;
+    height:5vh;
     cursor:pointer;
-    padding-top:5px;
+   
+    /* padding-top:5px; */
 }
 .top-footer-section .right-footer-section a{
     color:white;
     font-size:18px;
     text-decoration:none;
+    justify-content: center;
+    text-align:center;
    
 }
 .top-footer-section .right-footer-section a:hover{
@@ -218,11 +223,11 @@ th {
 }
 .top-footer-section .right-footer-section {
     background-color:#ee4908;
-    height:6vh;
+    height:5vh;
     border-radius:10px;
     text-align:center;
     cursor:pointer;
-    padding-top:5px;
+    /* padding-top:5px; */
 }
 p{
     font-size:18px;
@@ -250,8 +255,6 @@ p{
  }
  .second-section-heading{
     display:flex;
-    justify-content: space-around;
-    flex-direction:column;
  }
 .second-section-heading h3{
    color:black; 
@@ -342,11 +345,58 @@ p{
     }
     
     .map-represent #map{
-        width:55%;
+        width:60%;
         height: 50vh;
         border-radius:1rem
     }
 } 
+/* @media screen and (min-device-width: 50px) and (orientation: landscape){
+    .top-footer-section{
+         height:120px;
+     } 
+    .top-footer-section .left-footer-section{
+        height:8vh;
+        padding-top:5px;
+    }
+    .top-footer-section .right-footer-section {
+       
+        height:8vh;
+        padding-top:5px; 
+    }
+
+    } */
+    /* @media screen and (max-device-height: 766px) and (orientation: landscape) {
+        .top-footer-section{
+            height:190px;
+        } 
+       .top-footer-section .left-footer-section{
+           height:8vh;
+           padding-top:5px;
+       }
+       .top-footer-section .right-footer-section {
+          
+           height:8vh;
+           padding-top:5px; 
+       }
+
+    } */
+ 
+@media screen and (min-device-width: 767px) and (orientation: landscape){
+    .top-footer-section{
+         height:65px;
+     } 
+    .top-footer-section .left-footer-section{
+        height:8vh;
+        padding-top:5px;
+    }
+    .top-footer-section .right-footer-section {
+       
+        height:8vh;
+        padding-top:5px; 
+    }
+
+    }
+ 
 @media(min-width:1200px){
     .logo a{
           letter-spacing: 1px;
@@ -480,7 +530,10 @@ p{
         font-size:22px;
     }
 }
-@media (max-width:770px){
+@media (max-width:767px){
+    #rev {
+        flex-direction: column-reverse;
+    }
     .logo a{
           letter-spacing: 1px;
           word-spacing: 1px;
@@ -527,7 +580,7 @@ p{
     }
     .top-footer-section{
        padding-left:5px;
-       height:20vh;
+       height:15vh;
        display:flex;
        flex-direction:column;
     } 
@@ -647,9 +700,7 @@ p{
     .map-section h2{
         font-weight: 700;
     }
-    .description-container p{
-        font-size:6px;
-    }
+   
 }
 @media(max-width:450px){
     .logo a{
@@ -694,7 +745,17 @@ p{
     .top-footer-section{
        padding-left:5px;
     }
-    
+    .top-footer-section{
+        height:130px;
+    } 
+   .top-footer-section .left-footer-section{
+       height:6vh;
+       padding-top:5px;
+    }
+   .top-footer-section .right-footer-section {
+      height:6vh;
+      padding-top:5px;
+   }
     .top-footer-section .left-footer-section{
       width:98%;
      }
@@ -706,62 +767,20 @@ p{
     }
     
 }
-/* @media(max-width:350px){
-    .logo a{
-        padding-top:25px;
-        letter-spacing: 1px;
-        font-size:1.5rem;
-    }
-    .btn-section {
-        margin-top:10px;
-     }
-    .top-btn{
-        width: 35%;
-        height:56px;
-    }
-    .header_content  #btn2{
-        margin-left:-30px;
-    }
-    .header_content img{
-        width:27
-        0px;
-        margin:auto 20px;
-    }
-    .section_heading h2{
-        margin-left:0px;
-        font-size:20px;
-        text-align:center;
-    }
-    .section_heading h4{
-       font-size:20px;
-       height:58px;
-       /* padding-top:0px; 
-    }
-    .list_table{
-       margin:2px 2px 0px 0px;
-    }
-    td{
-       font-size:10px;
-    }
-    th {
-        width:10%;
-        font-size:10px;
-    }
+@media(max-width:370px){
     .top-footer-section{
-       padding-left:5px;
-    }
-    
-    .top-footer-section .left-footer-section{
-      width:98%;
-     }
-     .top-footer-section .right-footer-section{
-      width:98%;
-    }
-    .map-section h2{
-        font-weight:600;
-    }
-    
-} */
+        height:120px;
+    } 
+   .top-footer-section .left-footer-section {
+       height:6vh;
+       /* padding-top:5px; */
+   }
+   .top-footer-section .right-footer-section {
+       height:6vh;
+       /* padding-top:5px;  */
+   }
+
+}
 @media(max-width:290px){
     .logo a{
           padding-top:25px;
@@ -1070,4 +1089,21 @@ p{
         url('../../fonts/webfont/MarkPro-Hairline.woff') format('woff'),
         url('../../fonts/webfont/MarkPro-Hairline.ttf') format('truetype'),
         url('../../fonts/webfont/MarkPro-Hairline.svg#MarkPro-Black') format('svg');
+}
+
+@media only screen 
+and (max-device-width : 767px) 
+and (orientation : landscape){
+    .top-footer-section{
+        height:100px;
+    } 
+   .top-footer-section .left-footer-section{
+       height:8vh;
+       /* padding-top:5px; */
+   }
+   .top-footer-section .right-footer-section {
+      
+       height:8vh;
+       /* padding-top:5px;  */
+   }
 }
