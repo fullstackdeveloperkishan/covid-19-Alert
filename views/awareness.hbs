@@ -1,165 +1,194 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-   <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="Bootstrap/CSS/mainstyle.css">
+  <link rel="stylesheet" href="public/Bootstrap/CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="public/Bootstrap/CSS/mainstyle.css">
+  <link rel="shortcut icon" type="image/png" href="public/images/favicon1.png">
 
-    <!-- javascript CSS -->
-  <link rel="stylesheet" href="Bootstrap/fontawesome-free-5.10.2-web/css/all.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,100;1,200;1,800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  {{!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="preload"
+    as="style" crossorigin="true">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="true"> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="public/js/popper.min.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
 
-  
-<title>Covid-19</title>
+  <!-- javascript CSS -->
+
+
+  <title>Covid Alert | Awareness</title>
 </head>
-<body>
-  <div class='TopNavigation'>
-    <header class="navigation">
-        <div class="bottomHeader">
-          <div class="container-fluid">
-            <nav class="navbar navbar-dark  navbar-expand-md">
-              <div class="logo">
-                 <a class="navbar-brand m-3"  href="/"> <span style="color:rgb(1, 79, 224)">Covid</span>-19<span class="logo-text"style="color:red">  Alert</span></a>
-              </div>
-              <div class="spacer"></div>
-             
-             
-             <!---End <div class="double-spacer"></div>--> 
 
-              <button data-toggle="collapse" data-target="#navbarToggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse" id="navbarToggler">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/covid">Covid-19</a>
-                  </li>
-                  <li class="nav-item active ">
-                    <a class="nav-link" href="/awareness">Awareness</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/teams">Teams</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+<body>
+  <center>
+    <div style="max-width:1440px;width:100%;overflow-x:hidden">
+      <div class='TopNavigation'>
+        <header class="navigation" style="max-width:1180px;">
+          <div class="bottomHeader">
+            <div class="container-fluid">
+              <nav class="navbar navbar-dark  navbar-expand-lg">
+                <div class="logo">
+                  <a class="navbar-brand m-3" style="font-weight: 900;" href="/"> <span
+                      style="color:rgb(1, 79, 224)">Covid</span>-19<span class="logo-text" style="color:red">
+                      Alert</span></a>
+                </div>
+                <div class="spacer"></div>
+
+
+                <!---End <div class="double-spacer"></div>-->
+
+                <button data-toggle="collapse" data-target="#navbarToggler" type="button" class="navbar-toggler"><span
+                    class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" style="flex-direction:column" id="navbarToggler">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/covid">Covid-19</a>
+                    </li>
+                    <li class="nav-item active ">
+                      <a class="nav-link" href="/awareness">Awareness</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/teams">Teams</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </header>
+      </div>
+      <br />
+      <section class="content-heading" class="pt-3 pb-4">
+        <div class="container">
+          <div class="row no-gutters">
+            <div class="col-12 text-center" style="font-weight: 900;">
+              <h3 style="font-weight:700;">
+                Follow Simple Instructions to break the chain of Coronaviruses
+              </h3>
+              <hr />
+            </div>
           </div>
         </div>
-     </header>
+
+        <div class="content-section">
+          <div class="container">
+            <div class="first-section-heading">
+              <div class="row no-gutters">
+                <div class="col-lg-4 img-1">
+                  <img class="img-fluid" src="public/images/pic1.png" alt="corona-pic" />
+                </div>
+                <div class="col-lg-8">
+                  <h3 class="m-3">Maintain Social Distancing </h3>
+                  <p class="text-justify m-3">
+                    Social distancing is a non-pharmaceutical infection prevention and control intervention
+                    implemented to avoid/decrease contact between those who are infected with a disease causing
+                    pathogen and those who are not, so as to stop or slow down the rate and extent of disease
+                    transmission in a community. This eventually leads to decrease in spread, morbidity and
+                    mortality due to the disease.Spread happens when an infected person coughs, sneezes, or talks,
+                    and droplets from their mouth or nose are launched into the air and land in the mouths or noses
+                    of people nearby.Social distancing is especially important for people who are at higher risk
+                    for severe illness from COVID-19.
+                  </p>
+                </div>
+              </div>
+              </br>
+              <div class="second-section-heading">
+                <div class="row no-gutters" id="rev">
+                  <div class="col-lg-8">
+                    <h3 class="text-center m-3"> Always Wash your Hands</h3>
+                    <p class="text-justify m-3">
+                      Handwashing remains the No. 1 tip for preventing the spread of Coronavirus (COVID-19).
+                      It’s common sense and it works. However, it must be done properly and with soap and water.
+                      When soap and water are not available, the next best option is to use an alcohol-based hand
+                      sanitizer Proper handwashing not only reduces the spread of Coronavirus (COVID-19),
+                      it can prevent the spread of other viral illnesses such as cold and flu.Alcohol-based hand
+                      sanitizer
+                      (containing at least 60% alcohol) is helpful in protecting against the spread of germs and
+                      viruses.
+                      However, handwashing with soap and water is still best. Hand sanitizer is effective when soap and
+                      water are not available. This includes when taking public transportation and it’s difficult to get
+                      to a bathroom (airplane, train, bus).Some people use it when they sit down to eat at a restaurant.
+                    </p>
+                  </div>
+                  <div class="col-lg-4">
+                    <img class="img-fluid" src="public/images/hand2.jpg" alt="corona-pic" width="550px" height="370px" />
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="third-section-heading">
+                <div class="row no-gutters">
+                  <div class="col-lg-4">
+                    <img class="img-fluid" src="public/images/pic3.jpg" alt="corona-pic" width="550px" height="370px" />
+                  </div>
+                  <div class="col-lg-8">
+                    <h3 style="color:black;" class="m-3">Always Cover Your Mouth</h3>
+                    <p class="text-justify m-3">
+                      Cover your mouth and nose with a tissue when you cough or sneeze
+                      Throw used tissues in the trash
+                      If you don’t have a tissue, cough or sneeze into your elbow, not your hands
+                      Remember to immediately wash your hands after blowing your nose, coughing or sneezing.
+                      Masks should be used as part of a comprehensive strategy of measures to suppress transmission
+                      and save lives; the use of a mask alone is not sufficient to provide an adequate level of
+                      protection
+                      against COVID-19. You should also maintain a minimum physical distance of at least 1 metre from
+                      others,
+                      frequently clean your hands and avoid touching your face and mask.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+              <br />
+              <div class="fourth-section-heading">
+                <div class="row no-gutters">
+                  <div class="col-lg-8">
+                    <h3 style="color:black;" class="text-center m-3"> Always Wear Mask</h3>
+                    <p class="text-justify m-3">
+                      Facemasks help limit the spread of germs. When someone talks, coughs, or sneezes they may
+                      release tiny drops into the air that can infect others. If someone is ill a face masks can
+                      reduce the number of germs that the wearer releases and can protect other people from becoming
+                      sick.
+                      A face mask also protects the wearer’s nose and mouth from splashes or sprays of body fluids.
+                    </p>
+                  </div>
+                  <div class="col-lg-4">
+                    <img class="img-fluid" src="public/images/mask.jpg" alt="mask.jpg" width="350px" height="370px" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!-- Footer -->
+
+      <footer class="top-footer-section font-small special-color-dark pt-4">
+        <div class="container">
+          <div class="row no-gutters">
+            <div class="col-md-5 left-footer-section">
+              <a href="https://www.pmcares.gov.in/en/web/contribution/donate_india" target="_blank">Donate To PM Care Fund <i
+                  class="fas fa-hand-holding-usd pl-2 "></i></a>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5 right-footer-section">
+              <a href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN" target="_blank">Download Arogya Setu
+                App<i class="fab fa-google-play pl-2 "></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-    <section class="pt-3 pb-4">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 text-center">
-             <h2 style="color:black;">
-                Follow Simple Instructions to break the chain of Coronaviruses
-            </h2>
-            <hr/>
-           </div>
-        </div>
-       </div>
-      </br>
-    </section>
-    <div class="content-section">
-      <div class="container-fluid">
-        <div class="first-section-heading">
-          <div class="row" >
-            <div class="col-lg-4">
-                <img  class="img-fluid" src="images/pic1.png" alt="corona-pic"/>
-            </div>
-            <div class="col-lg-7">
-                 <h3 style="color:black; font-size:22px;text-decoration:underline;">Maintain Social Distancing </h3>
-                 <p class="text-justify">
-                     COVID-19 spreads mainly among people who are in close contact (within about 6 feet) for a prolonged period. 
-                     Spread happens when an infected person coughs, sneezes, or talks, and droplets from their mouth or nose are 
-                     launched into the air and land in the mouths or noses of people nearby.Social distancing is especially important
-                     for people who are at higher risk for severe illness from COVID-19.
-                 </p>
-            </div>
-            <div class="col-lg-1"></div>
-        </div>
-      </br>
-      <div class="second-section-heading">
-         <div class="row">
-            <div class="col-lg-7">
-              <h3 style="color:black; font-size:22px; text-decoration:underline;" class="text-center"> Always Wash your Hands</h3>
-                <p class="text-justify">
-                    Proper handwashing not only reduces the spread of Coronavirus (COVID-19), it can prevent 
-                    the spread of other viral illnesses such as cold and flu.Alcohol-based hand sanitizer (
-                    containing at least 60% alcohol) is helpful in protecting against the spread of germs and viruses.
-                    However, handwashing with soap and water is still best. Hand sanitizer is effective when soap and
-                    water are not available. This includes when taking public transportation and it’s difficult to get 
-                    to a bathroom (airplane, train, bus).Some people use it when they sit down to eat at a restaurant.
-               </p>
-           </div>
-           <div class="col-lg-4">
-               <img  class="img-fluid" src="images/hand2.jpg" alt="corona-pic" width="300px" height="300px" />
-           </div>
-         </div>
-       </div>
-         <br/>
-       <div class="third-section-heading">
-         <div class="row" >
-           <div class="col-lg-4">
-              <img  class="img-fluid" src="images/pic3.jpg" alt="corona-pic" width="300px" height="300px"/>
-           </div>
-           <div class="col-lg-7">
-              <h3 style="color:black; font-size:22px;text-decoration:underline;">Always Cover Your Mouth</h3>
-              <p class="text-justify">
-                  Cover your mouth and nose with a tissue when you cough or sneeze
-                  Throw used tissues in the trash
-                  If you don’t have a tissue, cough or sneeze into your elbow, not your hands
-                  Remember to immediately wash your hands after blowing your nose, coughing or sneezing.
-              </p>
-           </div>
-           <div class="col-lg-1"></div>
-         </div>
-       </div>
-       <div class="fourth-section-heading">
-          <div class="row">
-             <div class="col-lg-7">
-                <h3 style="color:black; font-size:22px; text-decoration:underline;" class="text-center"> Always Wear Mask</h3>
-                <p class="text-justify">
-                   Facemasks help limit the spread of germs.  When someone talks, coughs, or sneezes they may 
-                   release tiny drops into the air that can infect others. If someone is ill a face masks can 
-                   reduce the number of germs that the wearer releases and can protect other people from becoming sick.
-                   A face mask also protects the wearer’s nose and mouth from splashes or sprays of body fluids.
-               </p>
-             </div>
-             <div class="col-lg-4">
-                <img  class="img-fluid" src="images/mask.jpg" alt="mask.jpg" width="300px" height="300px" />
-            </div>
-         </div>
-       </div>
-     </div>
-   </div>
-    <!-- Footer -->
-    <footer class="top-footer-section font-small special-color-dark pt-4">
-      <div class="container">
-        <div class="row">
-           <div class="col-md-5 mb-4 pt-1 left-footer-section">
-            <a href="https://www.pmcares.gov.in/en/web/contribution/donate_india">Donate To Pm care Fund <i class="fas fa-hand-holding-usd pl-2 "></i></a>   
-         </div>
-         <div class="col-md-2"></div>
-         <div class="col-md-5  mb-4 pt-1 right-footer-section">
-            <a href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN">Download Arogya Setu App<i class="fab fa-google-play pl-2 "></i></a>
-         </div>
-        </div>
-      </div>
-    </footer>
-   <!-- Copyright -->
-   {{!-- <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-    </div> --}}
-    <!-- Copyright -->
- </body>
-  <script src="js/jquery-3.3.1.slim.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  </center>
+
+</body>
+
 </html>
