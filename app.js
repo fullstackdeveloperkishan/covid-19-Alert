@@ -1,11 +1,13 @@
+
 const express = require('express');
+var reload = require('reload')
 const app = express();
+const http = require('http');
 const https = require('https').createServer(app);
 const request = require('request');
 const hbs = require('hbs');
 
 //use express application
-
 
 
 //set view point of handlebars (hbs)
@@ -16,7 +18,7 @@ app.use(express.static(__dirname + '/'));
 //API call 
 //const (url) ="https://api.covid19api.com/summary";
 const url = "https://api.covid19india.org/data.json";
-const mapUrl = "https://disease.sh/v3/covid-19/countries";
+// const mapUrl = "https://disease.sh/v3/covid-19/countries";
 
 app.get('/teams',(req,res)=>{
   res.render('teams');
@@ -59,7 +61,9 @@ request({url: url}, (error , response) => {
        cdata[i].recovered = cdata[i].recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
        cdata[i].confirmed = cdata[i].confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
      }
-
+    
+    
+     
     //removing the total data from index[0] and deleting the state unassigned data
       delete cdata['36'];
       cdata.shift()
@@ -95,7 +99,11 @@ request({url: url}, (error , response) => {
 
 const port = process.env.PORT || 3000
 
-app.listen(port,() => {
-    console.log("server is working");
-    // console.log(https);
+reload(app).then(function (reloadReturned) {
+  app.listen(port,() => {
+      console.log("server is working");
+      // console.log(https);
+  })
+}).catch(function (err) {
+  console.error('Reload could not start, could not start server/sample app', err)
 })

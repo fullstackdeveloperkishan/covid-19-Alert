@@ -1,30 +1,39 @@
 window.addEventListener("load", async function () {
-	this.counter();
+    // this.counter();
 
-	mapboxgl.accessToken = 'pk.eyJ1IjoiaGFycnkxMjM0OTgiLCJhIjoiY2s4OXh1c3BqMGFsZzNvbXA3YmYyaGFhYSJ9.wmVMiMxlSqpzJPsj-UXr3Q';
-	map = new mapboxgl.Map({
-		container: 'map',
-		style: 'mapbox://styles/mapbox/dark-v10',
-		zoom: 3.2,
-		center: [80, 23]
-	});
-	// map.scrollZoom.disable();
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaGFycnkxMjM0OTgiLCJhIjoiY2s4OXh1c3BqMGFsZzNvbXA3YmYyaGFhYSJ9.wmVMiMxlSqpzJPsj-UXr3Q';
+    map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 3.2,
+        center: [80, 23]
+    });
+    // disable map zoom when using scroll
+    map.scrollZoom.disable();
+    
 
+    map.addControl(
+        new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        })
+        );
+   
+    // Add zoom and rotation controls to the map.
 
-	mapArrayData = []
-
-	await this.updateMap();
-
-
+    map.addControl(new mapboxgl.NavigationControl());
+ 
+    await this.updateMap();
+    
+    
 }, true);
 
 
-function counter() {
-	$('.countup').counterUp({
-		delay: 10,
-		time: 1000
-	});
-}
+// function counter() {
+//     $('.countup').counterUp({
+//         delay: 10,
+//         time: 1000
+//     });
+// }
 
 function loadMap() {
 	this.map.on('load', async function () {
