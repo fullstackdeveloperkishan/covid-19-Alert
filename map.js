@@ -43,7 +43,7 @@ window.addEventListener("load", async function () {
             closeButton: false,
             closeOnClick: false
             });
-        map.on('mouseenter', 'places', function(e) {
+        this.map.on('mouseenter', 'places', function(e) {
             // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
              
@@ -65,7 +65,7 @@ window.addEventListener("load", async function () {
             .addTo(map);
             });
 
-            map.on('mouseleave', 'places', function() {
+            this.map.on('mouseleave', 'places', function() {
                 map.getCanvas().style.cursor = '';
                 popup.remove();
                 });
