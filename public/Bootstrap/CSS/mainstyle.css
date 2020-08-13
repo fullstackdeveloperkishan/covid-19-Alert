@@ -154,10 +154,10 @@ th {
     background-color:rgb(0,179,0) ;
 }
 #demobox2 {
-    background-color:rgb(218,0,0) ;
+    background-color: rgb(255,234,0);
 }
 #demobox3{
-    background-color:rgb(179,0,0) ;
+    background-color:rgb(179,0,0);
 }
 #demobox4{
     background-color:rgb(100,0,0) ;
@@ -229,7 +229,7 @@ th {
     /* padding-top:5px; */
 }
 p{
-    font-size:18px;
+    font-size:20px;
 }
 /* Starting code of Awareness Page */
 .content-section{
@@ -253,6 +253,7 @@ p{
      font-weight:700;
  }
  .second-section-heading{
+    font-size:24px;
     display:flex;
  }
 .second-section-heading h3{
@@ -271,6 +272,7 @@ p{
     justify-content: space-around;
 }
 .third-section-heading h3{
+    font-size:24px;
      font-weight:700;
 }
 .third-section-heading img{
@@ -283,6 +285,7 @@ p{
     justify-content: space-between;
 }
 .fourth-section-heading h3{
+    font-size:24px;
    font-weight:700;
 }
 .fourth-section-heading img{
@@ -303,21 +306,21 @@ p{
     margin:8px;
 }
 .covid-section-1 h2{
-    font-size:30px;
+    font-size:24px;
     font-weight: 700;
  }
 .covid-section-2 img{
     width:95%;
  }
 .covid-section-2 h2{
-    font-size:30px;
+    font-size:24px;
     font-weight:700;
  }
 .covid-section-3 img{
     width:95%;
  }
 .covid-section-3 h2{
-    font-size:30px;
+    font-size:24px;
     font-weight:700;
 }
 
