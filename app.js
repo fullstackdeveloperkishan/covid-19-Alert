@@ -6,6 +6,7 @@ const http = require('http');
 const https = require('https').createServer(app);
 const request = require('request');
 const hbs = require('hbs');
+const nodemon = require ('nodemon');
 
 //use express application
 
@@ -97,7 +98,8 @@ request({url: url}, (error , response) => {
   
 //loacal host
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
+
 
 reload(app).then(function (reloadReturned) {
   app.listen(port,() => {
